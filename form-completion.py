@@ -17,7 +17,7 @@ import requests
 from PIL import Image
 from urllib import request
 import requests
-from functions import generate_first_name, generate_last_name
+# from functions import generate_first_name, generate_last_name
 
 optionsforchrome = Options()
 optionsforchrome.add_argument('--no-sandbox')
@@ -39,11 +39,19 @@ def complete_form(link):
     driver = webdriver.Chrome(PATH)
     driver.get(link)
 
+    sleep(random.choice(seconds))
+
     # quantumWizTextinputPaperinputInput exportInput
     # first name (text)
-    first_name = WebDriverWait(driver, 10).until(ec.presence_of_element_located(
-        (By.XPATH, "/html/body/div/div[2]/form/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input")))
-    print(first_name)
+    textboxes = driver.find_elements_by_class_name(
+        "quantumWizTextinputPaperinputInput.exportInput")
+
+    checkboxes = driver.find_elements_by_class_name(
+        "quantumWizTogglePapercheckboxInnerBox.exportInnerBox")
+
+    print(len(textboxes))
+    print(len(checkboxes))
+
     sleep(random.choice(seconds))
     # first_name.send_keys(generate_first_name())
     # sleep(random.choice(seconds))
