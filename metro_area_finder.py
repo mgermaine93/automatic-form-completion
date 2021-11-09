@@ -34,7 +34,7 @@ service = Service(ChromeDriverManager().install())
 PATH = "/Users/mgermaine93/Desktop/CODE/automatic-form-completion/chromedriver"
 
 # uses the link to the wikipedia page of a given town or city
-link = "https://en.wikipedia.org/wiki/Tampa_Bay_area"
+link = "https://en.wikipedia.org/wiki/Hennepin_County,_Minnesota"
 
 # temporary function to be used to retrieve the surrounding towns and cities of a given larger city
 
