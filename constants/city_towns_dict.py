@@ -5895,8 +5895,4 @@ CITY_TOWNS_DICT = {
         'Waubeka, WI', 
         'Woodland, WI'
     ]
-}
-
-temp_dict = {}
-for key in CITY_TOWNS_DICT:
-    temp_dict.append(list(set(key)))
+} 

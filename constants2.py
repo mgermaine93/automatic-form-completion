@@ -1,1 +1,0 @@
-CITY_TOWNS_DICT = {}

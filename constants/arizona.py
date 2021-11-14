@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 ARIZONA_PHOENIX = [
     "Phoenix", 
     "Mesa", 
