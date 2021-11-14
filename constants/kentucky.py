@@ -1,14 +1,14 @@
 KENTUCKY_SPRINGFIELD = [
-    "Bear Wallow, KY",
-    "Brush Grove, KY",
-    "Fredericktown, KY",
-    "Mackville, KY",
-    "Manton, KY",
-    "Pleasant Grove, KY",
-    "Saint Catharine, KY",
-    "Springfield, KY",
-    "Thompsonville, KY",
-    "Willisburg, KY",
-    "Mooresville, KY",
-    "Maud, KY"
+    "Bear Wallow",
+    "Brush Grove",
+    "Fredericktown",
+    "Mackville",
+    "Manton",
+    "Pleasant Grove",
+    "Saint Catharine",
+    "Springfield",
+    "Thompsonville",
+    "Willisburg",
+    "Mooresville",
+    "Maud"
 ]
