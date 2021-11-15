@@ -3,6 +3,7 @@ from names import get_first_name, get_last_name
 from constants.areas_and_cities import AREAS_AND_CITIES
 from constants.us_state_abbreviations import US_STATE_TO_ABBREVIATIONS
 import csv
+from collections import defaultdict
 
 
 def generate_geographic_area():
@@ -103,17 +104,27 @@ def generate_city_and_state(geographic_area):
 #         return f"{geographic_area} wasn't found in the list of available areas and cities."
 
 
-def generate_random_phone_number():
+def generate_random_area_code():
     """
     Needs docstring
     """
-    number = ""
-    for i in range(12):
-        if i == 3 or i == 7:
-            number += "-"
-        else:
-            number += str(randint(0, 9))
-    return number
+    area_code = ""
+    for i in range(3):
+        area_code += str(choice(range(2, 9)))
+    return area_code
+
+
+# def generate_random_phone_number():
+#     """
+#     Needs docstring
+#     """
+#     number = ""
+#     for i in range(12):
+#         if i == 3 or i == 7:
+#             number += "-"
+#         else:
+#             number += str(randint(0, 9))
+#     return number
 
 
 def generate_last_seven_digits_of_phone_number(area_code):
@@ -129,16 +140,36 @@ def generate_last_seven_digits_of_phone_number(area_code):
     return number
 
 
-def get_cities_and_area_codes_in_state(state):
+def get_full_state_name(state_abbreviation):
     """
     Needs docstring
     """
+    for full_name, abbreviation in US_STATE_TO_ABBREVIATIONS.items():
+        if state_abbreviation.lower() == abbreviation.lower():
+            return full_name
+        elif state_abbreviation.lower() == full_name.lower():
+            return state_abbreviation
+    else:
+        return f"{state_abbreviation} is not a valid two-character US state abbreviation, nor the name of a US state."
+
+
+def get_cities_and_area_codes_in_state(state):
+    # https://www.kite.com/python/answers/how-to-append-an-element-to-a-key-in-a-dictionary-with-python
+    """
+    Needs docstring
+    """
+    state_name = get_full_state_name(state)
     with open('us-area-code-cities.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=",")
-        cities_and_area_codes = {}
+        # if the city is already in the dict, add another area code as a
+        # value to the city key (defaultdict takes care of this automatically)
+        cities_and_area_codes = defaultdict(list)
         for row in csv_reader:
-            if row[2] == state:
-                cities_and_area_codes[row[1]] = row[0]
+            csv_area_code = row[0]
+            csv_city = row[1]
+            csv_state = row[2]
+            if csv_state == state_name:
+                cities_and_area_codes[csv_city].append(csv_area_code)
     return cities_and_area_codes
 
 
@@ -147,33 +178,22 @@ def get_closest_area_code(state, city):
     Needs docstring
     """
     available_cities_and_area_codes = get_cities_and_area_codes_in_state(state)
-    options = []
-    for area_city, area_code in available_cities_and_area_codes.items():
-        if area_city == city:
-            options.append(area_code)
-    if options:
-        return choice(options)
-    elif available_cities_and_area_codes:
-        return choice(list(available_cities_and_area_codes.values()))
+
+    for area_city, area_codes in available_cities_and_area_codes.items():
+        if area_city.lower() == city.lower():
+            return choice(area_codes)
+    # for if no area code was found for a given city, but there are area codes for the city's state
+    if available_cities_and_area_codes:
+        return choice(choice(list(available_cities_and_area_codes.values())))
+    # for all other cases
     else:
-        return generate_random_phone_number()
+        return generate_random_area_code()
 
 
-def get_full_state_name(state_abbreviation):
-    """
-    Needs docstring
-    """
-    if len(state_abbreviation) == 2:
-        for full_name, abbreviation in US_STATE_TO_ABBREVIATIONS.items():
-            if state_abbreviation.upper() == abbreviation:
-                return full_name
-        else:
-            return f"{state_abbreviation} was not found in the list of valid states and abbreviations."
-    return f"{state_abbreviation} is not a valid two-character US state abbreviation."
-
-
+print(get_closest_area_code("bloomenthal", "mackinac city"))
+# print(get_closest_area_code("mi", "rOyAl oak"))
 # print(get_geographic_area("Detroit"))
-print(generate_random_location())
+# print(generate_random_location())
 
 # def generate_phone_number(area_code):
 #     city_and_state =
