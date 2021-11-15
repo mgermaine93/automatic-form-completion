@@ -13,28 +13,30 @@ def generate_geographic_area():
     return choice(list(AREAS_AND_CITIES))
 
 
-def generate_random_geographic_area():
+def generate_city_and_state(geographic_area):
     """
     Needs docstring
     """
-    random_geographic_area = choice(list(AREAS_AND_CITIES.keys()))
-    return random_geographic_area
+    if geographic_area in AREAS_AND_CITIES.keys():
+        city_and_state = {}
+        city = choice(AREAS_AND_CITIES[geographic_area])
+        state = geographic_area[-2:]
+        city_and_state[city] = state
+        return city_and_state
+    else:
+        return f"{geographic_area} wasn't found in the list of available areas and cities."
 
 
 class Person(object):
-    def __init__(self, first_name=get_first_name(), last_name=get_last_name(), geographic_area=generate_random_geographic_area()):
+    def __init__(self, first_name=get_first_name(), last_name=get_last_name(), city_and_state=generate_city_and_state(generate_geographic_area())):
         """
         Needs docstring
         """
         self.first_name = first_name
         self.last_name = last_name
-        # self.geographic_area = geographic_area
-
-    # def generate_phone_number(self):
-    #     """
-    #     Needs docstring
-    #     """
-    #     pass
+        self.city_and_state = city_and_state
+        self.city = list(city_and_state.keys())[0]
+        self.state = list(city_and_state.values())[0]
 
     def generate_email_address(self):
         """
@@ -57,51 +59,22 @@ class Person(object):
         ]
         return f"{first_name_segment}{last_name_segment}{random_number}@{choice(providers)}"
 
+    def generate_phone_number(self):
+        first_three = get_closest_area_code(self.state, self.city)
+        last_seven = generate_last_seven_digits_of_phone_number()
+        return f"{first_three}{last_seven}"
 
-def get_geographic_area(city):
-    for area, cities in AREAS_AND_CITIES.items():
-        if city in cities:
-            return area
-    else:
-        return f"City {city} not found."
-
-
-# def generate_random_location():
-#     # This function will likely be very helpful!
-#     """
-#     Needs docstring
-#     """
-#     random_geographic_area = choice(list(AREAS_AND_CITIES.keys()))
-#     random_city_within_geographic_area = choice(
-#         AREAS_AND_CITIES[random_geographic_area])
-#     return {random_city_within_geographic_area, random_geographic_area}
-
-
-def generate_city_and_state(geographic_area):
-    """
-    Needs docstring
-    """
-    if geographic_area in AREAS_AND_CITIES.keys():
-        city_and_state = {}
-        city = choice(AREAS_AND_CITIES[geographic_area])
-        state = geographic_area[-2:]
-        city_and_state[city] = state
-        return city_and_state
-    else:
-        return f"{geographic_area} wasn't found in the list of available areas and cities."
-
-# def generate_city_and_state(geographic_area):
-#     """
-#     Needs docstring
-#     """
-#     if geographic_area in AREAS_AND_CITIES.keys():
-#         city_and_state = {}
-#         city = choice(AREAS_AND_CITIES[geographic_area])
-#         state = geographic_area[-2:]
-#         city_and_state[city] = state
-#         return city_and_state
-#     else:
-#         return f"{geographic_area} wasn't found in the list of available areas and cities."
+    def get_geographic_area(self):
+        """
+        Needs docstring
+        """
+        for area, cities in AREAS_AND_CITIES.items():
+            if self.city in cities:
+                # in case there are cities of the same name in different states
+                if self.state in area:
+                    return area
+        else:
+            return f"City {self.city} not found in the dictionary of available cities."
 
 
 def generate_random_area_code():
@@ -114,24 +87,11 @@ def generate_random_area_code():
     return area_code
 
 
-# def generate_random_phone_number():
-#     """
-#     Needs docstring
-#     """
-#     number = ""
-#     for i in range(12):
-#         if i == 3 or i == 7:
-#             number += "-"
-#         else:
-#             number += str(randint(0, 9))
-#     return number
-
-
-def generate_last_seven_digits_of_phone_number(area_code):
+def generate_last_seven_digits_of_phone_number():
     """
     Needs docstring
     """
-    number = f"{area_code}"
+    number = ""
     for i in range(9):
         if i == 0 or i == 4:
             number += "-"
@@ -190,7 +150,73 @@ def get_closest_area_code(state, city):
         return generate_random_area_code()
 
 
-print(get_closest_area_code("bloomenthal", "mackinac city"))
+person = Person()
+print(person.city_and_state)
+print(person.city)
+print(person.state)
+print(person.generate_phone_number())
+print(person.get_geographic_area())
+
+
+### SCRAP STUFF THAT MIGHT BE NEEDED LATER ###
+
+
+# def generate_city():
+#     """
+#     Needs docstring
+#     """
+#     geographic_areas = list(AREAS_AND_CITIES.keys())
+#     geographic_area = choice(geographic_areas)
+#     return choice(AREAS_AND_CITIES[geographic_area])
+
+
+# def generate_random_geographic_area():
+#     """
+#     Needs docstring
+#     """
+#     random_geographic_area = choice(list(AREAS_AND_CITIES.keys()))
+#     return random_geographic_area
+
+# if geographic_area in AREAS_AND_CITIES.keys():
+#     city = ""
+#     city = choice(AREAS_AND_CITIES[geographic_area])
+#     # state = geographic_area[-2:]
+#     # city_and_state[city] = state
+#     return city
+# else:
+#     return f"{geographic_area} wasn't found in the list of available areas and cities."
+
+
+# def generate_phone_number(state, city):
+#     first_three = get_closest_area_code(state, city)
+#     last_seven = generate_last_seven_digits_of_phone_number()
+#     return f"{first_three}{last_seven}"
+# print(generate_city())
+# print(get_closest_area_code("bloomenthal", "mackinac city"))
+
+
+# def generate_city_and_state(geographic_area):
+#     """
+#     Needs docstring
+#     """
+#     if geographic_area in AREAS_AND_CITIES.keys():
+#         city_and_state = {}
+#         city = choice(AREAS_AND_CITIES[geographic_area])
+#         state = geographic_area[-2:]
+#         city_and_state[city] = state
+#         return city_and_state
+#     else:
+#         return f"{geographic_area} wasn't found in the list of available areas and cities."
+
+# def generate_random_location():
+#     # This function will likely be very helpful!
+#     """
+#     Needs docstring
+#     """
+#     random_geographic_area = choice(list(AREAS_AND_CITIES.keys()))
+#     random_city_within_geographic_area = choice(
+#         AREAS_AND_CITIES[random_geographic_area])
+#     return {random_city_within_geographic_area, random_geographic_area}
 # print(get_closest_area_code("mi", "rOyAl oak"))
 # print(get_geographic_area("Detroit"))
 # print(generate_random_location())
