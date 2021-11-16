@@ -60,6 +60,9 @@ class Person(object):
         return f"{first_name_segment}{last_name_segment}{random_number}@{choice(providers)}"
 
     def generate_phone_number(self):
+        """
+        Needs docstring
+        """
         first_three = get_closest_area_code(self.state, self.city)
         last_seven = generate_last_seven_digits_of_phone_number()
         return f"{first_three}{last_seven}"
@@ -151,6 +154,9 @@ def get_closest_area_code(state, city):
 
 
 person = Person()
+print(person.first_name)
+print(person.last_name)
+print(person.generate_email_address())
 print(person.city_and_state)
 print(person.city)
 print(person.state)
