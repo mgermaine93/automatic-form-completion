@@ -153,15 +153,17 @@ def get_closest_area_code(state, city):
         return generate_random_area_code()
 
 
-person = Person()
-print(person.first_name)
-print(person.last_name)
-print(person.generate_email_address())
-print(person.city_and_state)
-print(person.city)
-print(person.state)
-print(person.generate_phone_number())
-print(person.get_geographic_area())
+# person = Person(first_name="Edwin", last_name="Frazier",
+#                 city_and_state={'Houghton', 'MI'})
+# print(person.first_name)
+# print(person.last_name)
+# print(person.generate_email_address())
+# print(person.city_and_state)
+# print(person.city)
+# print(person.state)
+# print(person.generate_phone_number())
+# print(person.get_geographic_area())
+# generate_city_and_state()
 
 
 ### SCRAP STUFF THAT MIGHT BE NEEDED LATER ###

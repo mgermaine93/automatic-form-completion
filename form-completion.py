@@ -1,4 +1,5 @@
 # https://www.youtube.com/watch?v=_ST_6heCS2I
+from dotenv import load_dotenv
 import urllib
 from random import randint, choice
 import os
@@ -7,17 +8,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException, NoSuchAttributeException, InvalidSelectorException
-import requests
-from PIL import Image
-from urllib import request
-import requests
-from decouple import config
+
+from person import Person
+
 # from functions import generate_first_name, generate_last_name
 
 optionsforchrome = Options()
@@ -28,65 +21,111 @@ optionsforchrome.add_argument('--disable-dev-shm-usage')
 optionsforchrome.add_argument('--ignore-certificate-errors')
 service = Service(ChromeDriverManager().install())
 
-# PATH = config('CHROMEDRIVER_PATH')
+load_dotenv()
 
-PATH = "/Users/mgermaine93/Desktop/CODE/automatic-form-completion/chromedriver"
-link = "https://docs.google.com/forms/d/e/1FAIpQLSdPxyzHSveo4UnsRZSdsAWfUvp8abL8X_scMNtZGIBWAHArJA/viewform"
+PATH = os.environ.get("CHROMEDRIVER_PATH")
+LINK = os.environ.get("LINK")
 
 
 def complete_form(num_times):
 
-    # Thanks to https://python-forum.io/Thread-MaxRetryError-while-scraping-a-website-multiple-times
-    driver = webdriver.Chrome(PATH)
-    driver.get(link)
-    seconds = [3, 4, 5, 6, 7, 8, 9, 10]
+    # https://stackoverflow.com/questions/21598872/how-to-create-multiple-class-objects-with-a-loop-in-python/21598969
+    list_of_people = []
+    people = [Person() for i in range(0, num_times)]
+    for person in people:
+        list_of_people.append(person)
 
-    # seconds = [3, 4, 5, 6, 7, 8, 9, 10]
-    for i in range(num_times):
-        sleep(choice(seconds))
+    # https://stackoverflow.com/questions/30420621/python-creating-object-instances-in-a-loop-with-independent-handling
+    for individual in list_of_people:
+        print(individual.first_name)
+    # # Thanks to https://python-forum.io/Thread-MaxRetryError-while-scraping-a-website-multiple-times
+    # driver = webdriver.Chrome(PATH)
+    # driver.get(LINK)
+    # seconds = list(range(3, 11))
 
-        # quantumWizTextinputPaperinputInput exportInput
-        # first name (text)
-        textboxes = driver.find_elements_by_class_name(
-            "quantumWizTextinputPaperinputInput.exportInput")
+    # for person in people:
 
-        first_name = textboxes[0]
-        last_name = textboxes[1]
-        phone_number = textboxes[2]
-        email_address = textboxes[3]
-        city = textboxes[4]
+    #     sleep(choice(seconds))
 
-        # It's necessary to distinguish between the check labels and the checkboxes
-        checkboxes_boxes = driver.find_elements_by_class_name(
-            "quantumWizTogglePapercheckboxInnerBox.exportInnerBox")
+    #     # retrieves a list of all available textboxes (should be 5 items with the current link)
+    #     textboxes = driver.find_elements_by_class_name(
+    #         "quantumWizTextinputPaperinputInput.exportInput")
 
-        checkboxes_labels = driver.find_elements_by_class_name(
-            "docssharedWizToggleLabeledLabelText.exportLabel.freebirdFormviewerComponentsQuestionCheckboxLabel")
+    #     # sends in the first name
+    #     first_name = textboxes[0]
+    #     first_name.send_keys(person.first_name)
+    #     sleep(choice(seconds))
 
-        for box in checkboxes_labels:
-            print(box.text)
-        # random_checkbox = choice(checkboxes)
-        # https://stackoverflow.com/questions/20996392/how-to-get-text-with-selenium-webdriver-in-python
+    #     # sends in the last name
+    #     last_name = textboxes[1]
+    #     last_name.send_keys(person.last_name)
+    #     sleep(choice(seconds))
 
-        # print(random_checkbox.text)
+    #     # sends in the phone number
+    #     phone_number = textboxes[2]
+    #     phone_number.send_keys(person.generate_phone_number())
+    #     sleep(choice(seconds))
 
-        submit_button = driver.find_element_by_class_name(
-            "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel")
+    #     # sends in the email address
+    #     email_address = textboxes[3]
+    #     email_address.send_keys(person.generate_email_address())
+    #     sleep(choice(seconds))
 
-        # submit_button.click()
+    #     area_checkboxes = driver.find_elements_by_class_name(
+    #         "docssharedWizToggleLabeledLabelText.exportLabel.freebirdFormviewerComponentsQuestionCheckboxLabel")
 
-        # print(len(textboxes))
-        # print(len(checkboxes))
+    #     # https://stackoverflow.com/questions/20996392/how-to-get-text-with-selenium-webdriver-in-python
+    #     # # creates a list of all locations present on the form (not sure if needed any more)
+    #     # area_location_labels = [
+    #     #     area.text for area in area_checkboxes if isinstance(area.text, str)]
+    #     # print(area_location_labels)
+    #     geographic_area = person.get_geographic_area()
+    #     # print(geographic_area)
+    #     # https://stackoverflow.com/questions/2361426/get-the-first-item-from-an-iterable-that-matches-a-condition
+    #     form_geographic_area_index = next((area_index for area_index in range(
+    #         0, len(area_checkboxes)) if area_checkboxes[area_index].text == geographic_area), None)
 
-        sleep(choice(seconds))
+    #     # print(form_geographic_area_index)
 
-        # avoid infinite loop
-        i += 1
+    #     # checks the corresponding geographic area checkbox
+    #     if form_geographic_area_index:
+    #         area_checkboxes[form_geographic_area_index].click()
+    #     sleep(choice(seconds))
+
+    #     # sends in the city and state
+    #     city = textboxes[4]
+    #     city.send_keys(f"{person.city}, {person.state}")
+    #     sleep(choice(seconds))
+
+    #     # submits the form
+    #     submit_button = driver.find_element_by_class_name(
+    #         "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel")
+    #     submit_button.click()
+    #     sleep(choice(seconds))
+
+    #     # # avoid infinite loop
+    #     # i += 1
+
+    #     # if i >= num_times:
+    #     #     driver.close()
+    #     # else:
+    #     # pass
+    #     # need to identify the "submit another response" button here
+    #     another_response = driver.find_element_by_xpath(
+    #         "/html/body/div[1]/div[2]/div[1]/div/div[4]/a")
+    #     # another_response = driver.find_element_by_class_name(
+    #     #     "freebirdFormviewerViewResponseLinksContainer")
+    #     another_response.click()
+    #     sleep(choice(seconds))
+
+    # driver.quit()
 
 
-# driver.close()
+complete_form(3)
 
-complete_form(1)
+
+### SCRAP STUFF THAT MIGHT BE NEEDED LATER ###
+
 
 # first_name.send_keys(generate_first_name())
 # sleep(random.choice(seconds))
