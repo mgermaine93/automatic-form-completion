@@ -4,6 +4,7 @@ from constants.areas_and_cities import AREAS_AND_CITIES
 from constants.us_state_abbreviations import US_STATE_TO_ABBREVIATIONS
 import csv
 from collections import defaultdict
+from collections.abc import Mapping
 
 
 def generate_geographic_area():
@@ -26,17 +27,44 @@ def generate_city_and_state(geographic_area):
     else:
         return f"{geographic_area} wasn't found in the list of available areas and cities."
 
+# https://stackoverflow.com/questions/25231989/how-to-check-if-a-variable-is-a-dictionary-in-python
+
+
+def get_city_from_city_and_state(city_and_state):
+    """
+    Needs docstring
+    """
+    if isinstance(city_and_state, Mapping):
+        # city will always be the key
+        return list(city_and_state.keys())[0]
+    else:
+        print(city_and_state)
+        raise TypeError(f"{city_and_state} is not of type dict.")
+
+
+def get_state_from_city_and_state(city_and_state):
+    """
+    Needs docstring
+    """
+    if isinstance(city_and_state, Mapping):
+        # state will always be the value
+        return list(city_and_state.values())[0]
+    else:
+        raise TypeError(f"{city_and_state} is not of type dict.")
+
 
 class Person(object):
-    def __init__(self, first_name=get_first_name(), last_name=get_last_name(), city_and_state=generate_city_and_state(generate_geographic_area())):
+
+    def __init__(self, first_name=None, last_name=None, city_and_state=None):
         """
         Needs docstring
         """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.city_and_state = city_and_state
-        self.city = list(city_and_state.keys())[0]
-        self.state = list(city_and_state.values())[0]
+        self.first_name = first_name or get_first_name()
+        self.last_name = last_name or get_last_name()
+        self.city_and_state = city_and_state or generate_city_and_state(
+            generate_geographic_area())
+        # self.city = get_city_from_city_and_state(city_and_state)
+        # self.state = get_state_from_city_and_state(city_and_state)
 
     def generate_email_address(self):
         """
@@ -63,7 +91,8 @@ class Person(object):
         """
         Needs docstring
         """
-        first_three = get_closest_area_code(self.state, self.city)
+        first_three = get_closest_area_code(get_state_from_city_and_state(
+            self.city_and_state), get_city_from_city_and_state(self.city_and_state))
         last_seven = generate_last_seven_digits_of_phone_number()
         return f"{first_three}{last_seven}"
 
@@ -72,12 +101,12 @@ class Person(object):
         Needs docstring
         """
         for area, cities in AREAS_AND_CITIES.items():
-            if self.city in cities:
+            if get_city_from_city_and_state(self.city_and_state) in cities:
                 # in case there are cities of the same name in different states
-                if self.state in area:
+                if get_state_from_city_and_state(self.city_and_state) in area:
                     return area
         else:
-            return f"City {self.city} not found in the dictionary of available cities."
+            return f"City {get_city_from_city_and_state(self.city_and_state)} not found in the dictionary of available cities."
 
 
 def generate_random_area_code():
@@ -151,6 +180,74 @@ def get_closest_area_code(state, city):
     # for all other cases
     else:
         return generate_random_area_code()
+
+
+def make_group_of_people(num_people):
+    # https://stackoverflow.com/questions/30420621/python-creating-object-instances-in-a-loop-with-independent-handling
+    """
+    Needs docstring
+    """
+    people = []
+    num = 0
+    while num < num_people:
+        person = Person()
+        people.append(person)
+        num += 1
+    return people
+
+
+# person = Person()
+# print(person.first_name)
+# print(person.last_name)
+# print(person.city_and_state)
+# print(person.get_geographic_area())
+# print(person.generate_phone_number())
+# print(person.generate_email_address())
+
+# area = generate_geographic_area()
+# city_and_state = generate_city_and_state(area)
+
+# print(area)
+# print(city_and_state)
+
+
+# def get_city_from_city_and_state(city_and_state):
+#     """
+#     Needs docstring
+#     """
+#     if isinstance(city_and_state, Mapping):
+#         # city will always be the key
+#         return list(city_and_state.keys())[0]
+#     else:
+#         return f"{city_and_state} is not of type dict."
+
+
+# def get_state_from_city_and_state(city_and_state):
+#     """
+#     Needs docstring
+#     """
+#     if isinstance(city_and_state, Mapping):
+#         # city will always be the key
+#         return list(city_and_state.values())[0]
+#     else:
+#         return f"{city_and_state} is not of type dict."
+
+
+# print(get_city_from_city_and_state({'Waterloo': 'NE'}))
+# print(get_state_from_city_and_state({'Waterloo': 'NE'}))
+
+
+# person = Person()
+# print(person.city_and_state)
+# print(person.city)
+# print(person.state)
+# same_named_group = make_group_of_people(3)
+
+# for person in same_named_group:
+#     print(f"***NEW PERSON {same_named_group.index(person)}***")
+#     print(person.first_name)
+#     print(person.last_name)
+#     print(person.city_and_state)
 
 
 # person = Person(first_name="Edwin", last_name="Frazier",
