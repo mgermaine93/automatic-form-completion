@@ -103,14 +103,14 @@ def complete_form(num_times):
 
         print(f"{person.first_name} {person.last_name} from {get_city_from_city_and_state(person.city_and_state)}, {get_state_from_city_and_state(person.city_and_state)} was added to the form")
 
-        # would like to somehow prevent clicking the "add new response" button
-        # if the list of people has been exhausted
-        another_response = driver.find_element_by_xpath(
-            "/html/body/div[1]/div[2]/div[1]/div/div[4]/a")
-        # another_response = driver.find_element_by_class_name(
-        #     "freebirdFormviewerViewResponseLinksContainer")
-        another_response.click()
-        sleep(choice(seconds))
+        # prevents clicking the "add new response" button if the list of people has been exhausted
+        if people.index(person) < len(people) - 1:
+            another_response = driver.find_element_by_xpath(
+                "/html/body/div[1]/div[2]/div[1]/div/div[4]/a")
+            another_response.click()
+            sleep(choice(seconds))
+        else:
+            print("Last person")
 
     driver.quit()
 
