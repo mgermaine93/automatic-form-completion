@@ -9,14 +9,23 @@ from collections.abc import Mapping
 
 def generate_geographic_area():
     """
-    Needs docstring
+    Returns a random US-based geographic area from a large AREAS_AND_CITIES dictionary object.
+
+    :return:  an object of type string that represents a US-based geographic area, e.g. "Wake County, NC".
+    :rtype:  `str`.
     """
     return choice(list(AREAS_AND_CITIES))
 
 
 def generate_city_and_state(geographic_area):
     """
-    Needs docstring
+    Takes in a US-based geographic area and returns a random city and state from within that geographic area, if one is available.
+
+    :param geographic_area:  a US-based geographic area, e.g. "Delaware County, PA".
+    :type geographic_area: `str`, required.
+
+    :return:  an object of type dict that represents a city (the key) and its two-letter state abbreviation (the value) that resides in the geographic area entered into the function.
+    :rtype:  `dict`.
     """
     if geographic_area in AREAS_AND_CITIES.keys():
         city_and_state = {}
@@ -25,14 +34,21 @@ def generate_city_and_state(geographic_area):
         city_and_state[city] = state
         return city_and_state
     else:
-        return f"{geographic_area} wasn't found in the list of available areas and cities."
+        raise KeyError(
+            f"{geographic_area} wasn't found in the list of available geographic areas.")
 
 # https://stackoverflow.com/questions/25231989/how-to-check-if-a-variable-is-a-dictionary-in-python
 
 
 def get_city_from_city_and_state(city_and_state):
     """
-    Needs docstring
+    Takes in a US city- and state-based location and returns the city of that location.
+
+    :param city_and_state:  a US city- and state-based location (e.g., `{'Detroit': 'MI'}`).
+    :type city_and_state: `dict`, required.
+
+    :return:  an object of type string that represents the city of the user-input city_and_state location.
+    :rtype:  `str`.
     """
     if isinstance(city_and_state, Mapping):
         # city will always be the key
@@ -44,7 +60,13 @@ def get_city_from_city_and_state(city_and_state):
 
 def get_state_from_city_and_state(city_and_state):
     """
-    Needs docstring
+    Takes in a US city- and state-based location and returns the two-letter state abbreviation of that location.
+
+    :param city_and_state:  a US city- and state-based location (e.g., `{'Mackinac City': 'MI'}`).
+    :type city_and_state: `dict`, required.
+
+    :return:  an object of type string that represents the two-letter state abbreviation of the user-input city_and_state location.
+    :rtype:  `str`.
     """
     if isinstance(city_and_state, Mapping):
         # state will always be the value
@@ -195,6 +217,10 @@ def make_group_of_people(num_people):
         num += 1
     return people
 
+
+# area = generate_geographic_area()
+# print(area)
+# print(type(area))
 
 # person = Person()
 # print(person.first_name)
