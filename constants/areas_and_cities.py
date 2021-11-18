@@ -1,4 +1,3 @@
-from random import randint, choice
 from constants.arkansas import *
 from constants.arizona import *
 from constants.california import *

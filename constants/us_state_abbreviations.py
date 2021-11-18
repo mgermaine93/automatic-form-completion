@@ -1,3 +1,4 @@
+# thanks to https://gist.github.com/rogerallen/1583593
 US_STATE_TO_ABBREVIATIONS = {
     "Alabama": "AL",
     "Alaska": "AK",
