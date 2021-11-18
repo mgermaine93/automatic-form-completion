@@ -2,7 +2,7 @@
 
 This subdirectory mostly contains several files named after US states.
 
-It also contains a US state/abbreviations constant, that I found [here](https://gist.github.com/rogerallen/1583593), as well as a city/towns constant that makes references each file named after a US-state.
+It also contains a US state/abbreviations constant, that I found [here](https://gist.github.com/rogerallen/1583593), as well as a city/towns constant that references each file named after a US-state.
 
 ## Adding Files
 
@@ -165,5 +165,7 @@ To **EDIT** an existing file in this directory so that the file is referenced pr
 10. That's it -- thank you! Open a pull request if you feel so inclined and I'll take a look.
 
 <a name="myfootnote1">1</a>: This is more of a reminder for myself, but contributors are welcome to open a PR if they so desire.
+
 <a name="myfootnote2">2</a>: Each list within the file represents a metropolitan area within the state after which the file is named.
+
 <a name="myfootnote3">3</a>: If a city within a metropolitan area is outside of the metropolitan area's home state, please do not add it.
