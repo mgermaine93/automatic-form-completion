@@ -306,7 +306,7 @@ def get_cities_and_area_codes_in_state(state):
     """
     # https://www.kite.com/python/answers/how-to-append-an-element-to-a-key-in-a-dictionary-with-python
     state_name = get_full_state_name(state)
-    with open('us-area-code-cities.csv') as csv_file:
+    with open('constants/us-area-code-cities.csv') as csv_file:
         csv_reader = reader(csv_file, delimiter=",")
         # if the city is already in the dict, add another area code as a
         # value to the city key (defaultdict takes care of this automatically)
@@ -376,3 +376,6 @@ def make_group_of_people(num_people):
         people.append(person)
         num += 1
     return people
+
+
+print(get_cities_and_area_codes_in_state("Michigan"))
