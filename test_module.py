@@ -1,4 +1,12 @@
+from random import randint, choice
+from collections.abc import Mapping
+from collections import defaultdict
+from csv import reader
+from constants.us_state_abbreviations import US_STATE_TO_ABBREVIATIONS
+from constants.areas_and_cities import AREAS_AND_CITIES
 import unittest
+import re
+
 from person import (
     Person,
     generate_geographic_area,
@@ -13,24 +21,77 @@ from person import (
 
 class UnitTests(unittest.TestCase):
     def setUp(self):
-        self.person1 = Person(first_name="Charles", last_name="Rogers", city_and_state={
-                              'Palm Springs': 'CA'})
         self.person1 = Person(first_name="Elizabeth", last_name="Lastra", city_and_state={
                               'Arlington Park': 'TX'})
-        self.person3 = Person(
-            first_name="David", last_name="Swanson", city_and_state={'Butler': 'WI'})
+        self.person2 = Person(
+            first_name="David", last_name="Swanson", city_and_state={'Detroit': 'MI'})
 
-    # test generate_email
+    def test_first_name_string(self):
+        person1_first_name = self.person1.first_name
+        actual = isinstance(person1_first_name, str)
+        expected = True
+        self.assertEqual(actual, expected,
+                         'Expected `first_name` to be a string.')
+
+    def test_last_name_is_string(self):
+        person1_last_name = self.person1.last_name
+        actual = isinstance(person1_last_name, str)
+        expected = True
+        self.assertEqual(actual, expected,
+                         'Expected `last_name` to be a string.')
+
+    def test_geographic_area_is_dict(self):
+        person1_city_and_state = self.person1.city_and_state
+        actual = isinstance(person1_city_and_state, Mapping)
+        expected = True
+        self.assertEqual(actual, expected,
+                         'Expected `city_and_state` to be a dict.')
+
+    def test_generate_email_address(self):
+        person1_email_address = self.person1.generate_email_address()
+        # this needs work
+        actual = re.match("\d[@]\D[.com]", person1_email_address)
+        expected = True
+        self.assertEqual(actual, expected,
+                         'Expected `generate_email_address()` to return a string representing an email address.')
+
+    def test_generate_phone_number(self):
+        # this needs work, too
+        person1_phone_number = self.person1.generate_phone_number()
+        actual = re.match("\817-\d{3}-\d{4}", person1_phone_number)
+        expected = True
+        self.assertEqual(actual, expected,
+                         'Expected `generate_phone_number()` to return a string representing an Arlington, TX, phone number starting with "817" or "469".')
+
+    def test_get_geographic_area(self):
+        person1_geographic_area = self.person1.get_geographic_area()
+        actual = person1_geographic_area
+        expected = "Dallas, TX"
+        self.assertEqual(actual, expected,
+                         'Expected `get_geographic_area()` to return "Dallas, TX".')
+
+    # METHODS
+
+    # test first name is string
+    # test last name is string
+    # test geographic area is dict
+    # test generate_email_address
     # test generate_phone_number
-    # test generate_geographic_area
+    # test get_geographic_area
 
-    # generate_geographic_area,
-    # generate_city_and_state,
+    # FUNCTIONS
+
+    # test generate_geographic_area
+    # test generate city and state
+    # test get city from city and state
+    # test get state from city and state
     # generate_random_area_code,
     # generate_last_seven_digits_of_phone_number,
     # get_full_state_name,
     # get_cities_and_area_codes_in_state,
     # get_closest_area_code
+    # make_group_people
+
 
 #     def test_deposit(self):  # good
 #         self.food.deposit(900, "deposit")

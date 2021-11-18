@@ -376,6 +376,3 @@ def make_group_of_people(num_people):
         people.append(person)
         num += 1
     return people
-
-
-print(get_cities_and_area_codes_in_state("Michigan"))
