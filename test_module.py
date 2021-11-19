@@ -6,6 +6,7 @@ from constants.us_state_abbreviations import US_STATE_TO_ABBREVIATIONS
 from constants.areas_and_cities import AREAS_AND_CITIES
 import unittest
 import re
+from email_validator import validate_email
 
 from person import (
     Person,
@@ -13,6 +14,8 @@ from person import (
     generate_city_and_state,
     generate_random_area_code,
     generate_last_seven_digits_of_phone_number,
+    get_city_from_city_and_state,
+    get_state_from_city_and_state,
     get_full_state_name,
     get_cities_and_area_codes_in_state,
     get_closest_area_code
@@ -22,7 +25,7 @@ from person import (
 class UnitTests(unittest.TestCase):
     def setUp(self):
         self.person1 = Person(first_name="Elizabeth", last_name="Lastra", city_and_state={
-                              'Arlington Park': 'TX'})
+                              'Pittsburgh': 'PA'})
         self.person2 = Person(
             first_name="David", last_name="Swanson", city_and_state={'Detroit': 'MI'})
 
@@ -49,35 +52,94 @@ class UnitTests(unittest.TestCase):
 
     def test_generate_email_address(self):
         person1_email_address = self.person1.generate_email_address()
-        # this needs work
-        actual = re.match("\d[@]\D[.com]", person1_email_address)
+        actual = bool(validate_email(person1_email_address))
         expected = True
         self.assertEqual(actual, expected,
                          'Expected `generate_email_address()` to return a string representing an email address.')
 
     def test_generate_phone_number(self):
-        # this needs work, too
         person1_phone_number = self.person1.generate_phone_number()
-        actual = re.match("\817-\d{3}-\d{4}", person1_phone_number)
+        actual = bool(
+            re.match("(?:724|412|878)-\d{3}-\d{4}", person1_phone_number))
         expected = True
         self.assertEqual(actual, expected,
-                         'Expected `generate_phone_number()` to return a string representing an Arlington, TX, phone number starting with "817" or "469".')
+                         'Expected `generate_phone_number()` to return a string representing a Pittsburgh, PA, phone number starting with "724" or "412" or "878".')
 
     def test_get_geographic_area(self):
         person1_geographic_area = self.person1.get_geographic_area()
         actual = person1_geographic_area
-        expected = "Dallas, TX"
+        expected = "Pittsburgh, PA"
         self.assertEqual(actual, expected,
                          'Expected `get_geographic_area()` to return "Dallas, TX".')
 
-    # METHODS
+    def test_get_geographic_area_with_unlisted_city(self):
+        # https://stackoverflow.com/questions/6103825/how-to-properly-use-unit-testings-assertraises-with-nonetype-objects
+        self.assertRaises(KeyError, lambda: self.person2.get_geographic_area())
 
-    # test first name is string
-    # test last name is string
-    # test geographic area is dict
-    # test generate_email_address
-    # test generate_phone_number
-    # test get_geographic_area
+    def test_generate_geographic_area(self):
+        random_geographic_area = generate_geographic_area()
+        self.assertIn(random_geographic_area, AREAS_AND_CITIES,
+                      'Expected `generate_geographic_area() to return an item from the AREAS_AND_CITIES dict.')
+        self.assertIn(random_geographic_area, AREAS_AND_CITIES.keys(
+        ), 'Expected `generate_geographic_area()` to return a key from the AREAS_AND_CITIES dict.')
+
+    def test_generate_city_and_state(self):
+        # this needs work
+        random_geographic_area = generate_geographic_area()
+        expected_geographic_area_type = isinstance(random_geographic_area, str)
+        expected_geographic_area_names = AREAS_AND_CITIES.keys()
+        random_city_and_state = generate_city_and_state(random_geographic_area)
+        expected_city_and_state_type = isinstance(
+            random_city_and_state, Mapping)
+        expected_geographic_area_city_names = AREAS_AND_CITIES[random_geographic_area]
+        self.assertEqual(True, expected_geographic_area_type,
+                         f'Expected {random_geographic_area} to be a string.')
+        self.assertEqual(True, expected_city_and_state_type,
+                         f'Expected {random_city_and_state} to be a dict.')
+        self.assertIn(random_geographic_area, expected_geographic_area_names,
+                      f'Expected {random_geographic_area} to be a key in the AREAS_AND_CITIES dict.')
+        self.assertIn(
+            list(random_city_and_state.keys())[0], expected_geographic_area_city_names, f'Expected {list(random_city_and_state.keys())[0]} to be drawn from the AREAS_AND_KEYS dict at the {random_geographic_area} key.')
+        self.assertEqual(list(random_city_and_state.values())[0], random_geographic_area[-2:],
+                         f'Expected {list(random_city_and_state.values())[0]} to be equal to {random_geographic_area[-2:]}, i.e., the state should be the same as the state in which the geographic area is found.')
+
+    def test_get_city_from_city_and_state(self):
+        city_and_state_dict = {"McAllen": "TX"}
+        city_and_state_string = "McAllen, TX"
+        actual = "McAllen"
+        expected = get_city_from_city_and_state(city_and_state_dict)
+        self.assertEqual(
+            actual, expected, 'Expected `get_city_from_city_and_state() to retrieve the city from a city/string dict.`')
+        self.assertRaises(
+            TypeError, lambda: get_city_from_city_and_state(city_and_state_string))
+
+    def test_get_state_from_city_and_state(self):
+        city_and_state_dict = {"Everett": "WA"}
+        city_and_state_string = "Everett, WA"
+        actual = "WA"
+        expected = get_state_from_city_and_state(city_and_state_dict)
+        self.assertEqual(
+            actual, expected, 'Expected `get_state_from_city_and_state()` to retrieve the state value from a city/string dict.`')
+        self.assertRaises(
+            TypeError, lambda: get_state_from_city_and_state(city_and_state_string))
+
+    def test_generate_random_area_code(self):
+        pass
+
+    def test_generate_last_seven_digits_of_phone_number(self):
+        pass
+
+    def test_get_full_state_name(self):
+        pass
+
+    def test_get_cities_and_area_codes_in_state(self):
+        pass
+
+    def test_get_closest_area_code(self):
+        pass
+
+    def test_make_group_people(self):
+        pass
 
     # FUNCTIONS
 
@@ -92,6 +154,14 @@ class UnitTests(unittest.TestCase):
     # get_closest_area_code
     # make_group_people
 
+    # METHODS
+
+    # test first name is string
+    # test last name is string
+    # test geographic area is dict
+    # test generate_email_address
+    # test generate_phone_number
+    # test get_geographic_area
 
 #     def test_deposit(self):  # good
 #         self.food.deposit(900, "deposit")

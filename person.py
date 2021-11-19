@@ -70,7 +70,7 @@ def get_city_from_city_and_state(city_and_state):
         city = list(city_and_state.keys())[0]
         return city
     else:
-        print(city_and_state)
+        # print(city_and_state)
         raise TypeError(f"{city_and_state} is not of type dict.")
 
 
