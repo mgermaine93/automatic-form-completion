@@ -70,7 +70,6 @@ def get_city_from_city_and_state(city_and_state):
         city = list(city_and_state.keys())[0]
         return city
     else:
-        # print(city_and_state)
         raise TypeError(f"{city_and_state} is not of type dict.")
 
 
@@ -187,7 +186,7 @@ class Person(object):
         first_three = get_closest_area_code(get_state_from_city_and_state(
             self.city_and_state), get_city_from_city_and_state(self.city_and_state))
         last_seven = generate_last_seven_digits_of_phone_number()
-        phone_number = f"{first_three}{last_seven}"
+        phone_number = f"{first_three}-{last_seven}"
         return phone_number
 
     def get_geographic_area(self):
@@ -248,8 +247,8 @@ def generate_last_seven_digits_of_phone_number():
             a random string of eight characters and a hyphen, e.g. "888-8888"
     """
     digits = ""
-    for i in range(9):
-        if i == 0 or i == 4:
+    for i in range(8):
+        if i == 3:
             digits += "-"
         else:
             digits += str(randint(0, 9))

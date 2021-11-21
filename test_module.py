@@ -18,7 +18,8 @@ from person import (
     get_state_from_city_and_state,
     get_full_state_name,
     get_cities_and_area_codes_in_state,
-    get_closest_area_code
+    get_closest_area_code,
+    make_group_of_people
 )
 
 
@@ -34,28 +35,28 @@ class UnitTests(unittest.TestCase):
         actual = isinstance(person1_first_name, str)
         expected = True
         self.assertEqual(actual, expected,
-                         'Expected `first_name` to be a string.')
+                         'Expected first_name to be a string.')
 
     def test_last_name_is_string(self):
         person1_last_name = self.person1.last_name
         actual = isinstance(person1_last_name, str)
         expected = True
         self.assertEqual(actual, expected,
-                         'Expected `last_name` to be a string.')
+                         'Expected last_name to be a string.')
 
     def test_geographic_area_is_dict(self):
         person1_city_and_state = self.person1.city_and_state
         actual = isinstance(person1_city_and_state, Mapping)
         expected = True
         self.assertEqual(actual, expected,
-                         'Expected `city_and_state` to be a dict.')
+                         'Expected city_and_state to be a dict.')
 
     def test_generate_email_address(self):
         person1_email_address = self.person1.generate_email_address()
         actual = bool(validate_email(person1_email_address))
         expected = True
         self.assertEqual(actual, expected,
-                         'Expected `generate_email_address()` to return a string representing an email address.')
+                         'Expected generate_email_address() to return a string representing an email address.')
 
     def test_generate_phone_number(self):
         person1_phone_number = self.person1.generate_phone_number()
@@ -63,14 +64,14 @@ class UnitTests(unittest.TestCase):
             re.match("(?:724|412|878)-\d{3}-\d{4}", person1_phone_number))
         expected = True
         self.assertEqual(actual, expected,
-                         'Expected `generate_phone_number()` to return a string representing a Pittsburgh, PA, phone number starting with "724" or "412" or "878".')
+                         'Expected generate_phone_number() to return a string representing a Pittsburgh, PA, phone number starting with "724" or "412" or "878".')
 
     def test_get_geographic_area(self):
         person1_geographic_area = self.person1.get_geographic_area()
         actual = person1_geographic_area
         expected = "Pittsburgh, PA"
         self.assertEqual(actual, expected,
-                         'Expected `get_geographic_area()` to return "Dallas, TX".')
+                         'Expected get_geographic_area() to return "Dallas, TX".')
 
     def test_get_geographic_area_with_unlisted_city(self):
         # https://stackoverflow.com/questions/6103825/how-to-properly-use-unit-testings-assertraises-with-nonetype-objects
@@ -79,9 +80,9 @@ class UnitTests(unittest.TestCase):
     def test_generate_geographic_area(self):
         random_geographic_area = generate_geographic_area()
         self.assertIn(random_geographic_area, AREAS_AND_CITIES,
-                      'Expected `generate_geographic_area() to return an item from the AREAS_AND_CITIES dict.')
+                      'Expected generate_geographic_area() to return an item from the AREAS_AND_CITIES dict.')
         self.assertIn(random_geographic_area, AREAS_AND_CITIES.keys(
-        ), 'Expected `generate_geographic_area()` to return a key from the AREAS_AND_CITIES dict.')
+        ), 'Expected generate_geographic_area() to return a key from the AREAS_AND_CITIES dict.')
 
     def test_generate_city_and_state(self):
         # this needs work
@@ -109,7 +110,7 @@ class UnitTests(unittest.TestCase):
         actual = "McAllen"
         expected = get_city_from_city_and_state(city_and_state_dict)
         self.assertEqual(
-            actual, expected, 'Expected `get_city_from_city_and_state() to retrieve the city from a city/string dict.`')
+            actual, expected, 'Expected get_city_from_city_and_state() to retrieve the city from a city/string dict.')
         self.assertRaises(
             TypeError, lambda: get_city_from_city_and_state(city_and_state_string))
 
@@ -119,149 +120,66 @@ class UnitTests(unittest.TestCase):
         actual = "WA"
         expected = get_state_from_city_and_state(city_and_state_dict)
         self.assertEqual(
-            actual, expected, 'Expected `get_state_from_city_and_state()` to retrieve the state value from a city/string dict.`')
+            actual, expected, 'Expected get_state_from_city_and_state() to retrieve the state value from a city/string dict.')
         self.assertRaises(
             TypeError, lambda: get_state_from_city_and_state(city_and_state_string))
 
     def test_generate_random_area_code(self):
-        pass
+        random_area_code = generate_random_area_code()
+        actual = bool(re.match("[2-9]\d{2}", random_area_code))
+        expected = True
+        self.assertEqual(
+            actual, expected, 'Expected generate_random_area_code() to return a string of three digits with the first digit greater than or equal to 2.')
 
     def test_generate_last_seven_digits_of_phone_number(self):
-        pass
+        random_last_seven_digits = generate_last_seven_digits_of_phone_number()
+        actual = bool(re.match("(\d{3})-(\d{4})", random_last_seven_digits))
+        expected = True
+        self.assertEqual(
+            actual, expected, 'Expected generate_random_last_seven_digits() to return a string of eight characters -- a single hyphen, followed by three digits of any value, followed by a hypen, followed by four digits of any value, e.g., "456-7890".')
 
     def test_get_full_state_name(self):
-        pass
+        full_state_name = get_full_state_name("WV")
+        actual = "West Virginia"
+        expected = full_state_name
+        self.assertEqual(
+            actual, expected, 'Expected get_full_state_name("WV") to return "West Virginia", the full state name corresponding to "WV".')
+        self.assertRaises(
+            KeyError, lambda: get_full_state_name("VV"))
+        self.assertIn(full_state_name, list(US_STATE_TO_ABBREVIATIONS.keys(
+        )), 'Expected the full state name of "WV" to be in the US_STATE_TO_ABBREVIATIONS dict.')
 
     def test_get_cities_and_area_codes_in_state(self):
-        pass
+        state = "Vermont"
+        actual = isinstance(get_cities_and_area_codes_in_state(state), Mapping)
+        expected = True
+        self.assertEqual(
+            actual, expected, 'Expected get_cities_and_area_codes_in_state("Vermont") to return a dict.')
 
     def test_get_closest_area_code(self):
-        pass
+        state = "Michigan"
+        city = "Detroit"
+        actual = get_closest_area_code(state, city)
+        expected = "313"
+        self.assertEqual(
+            actual, expected, 'Expected get_closest_area_code("Michigan", "Detroit") to return "313".')
 
     def test_make_group_people(self):
-        pass
-
-    # FUNCTIONS
-
-    # test generate_geographic_area
-    # test generate city and state
-    # test get city from city and state
-    # test get state from city and state
-    # generate_random_area_code,
-    # generate_last_seven_digits_of_phone_number,
-    # get_full_state_name,
-    # get_cities_and_area_codes_in_state,
-    # get_closest_area_code
-    # make_group_people
-
-    # METHODS
-
-    # test first name is string
-    # test last name is string
-    # test geographic area is dict
-    # test generate_email_address
-    # test generate_phone_number
-    # test get_geographic_area
-
-#     def test_deposit(self):  # good
-#         self.food.deposit(900, "deposit")
-#         actual = self.food.ledger[0]
-#         expected = {"amount": 900, "description": "deposit"}
-#         self.assertEqual(
-#             actual, expected, 'Expected `deposit` method to create a specific object in the ledger instance variable.')
-
-#     def test_deposit_no_description(self):  # good
-#         self.food.deposit(45.56)
-#         actual = self.food.ledger[0]
-#         expected = {"amount": 45.56, "description": ""}
-#         self.assertEqual(
-#             actual, expected, 'Expected calling `deposit` method with no description to create a blank description.')
-
-#     def test_withdraw(self):  # good
-#         self.food.deposit(900, "deposit")
-#         self.food.withdraw(45.67, "milk, cereal, eggs, bacon, bread")
-#         actual = self.food.ledger[1]
-#         expected = {"amount": -45.67,
-#                     "description": "milk, cereal, eggs, bacon, bread"}
-#         self.assertEqual(
-#             actual, expected, 'Expected `withdraw` method to create a specific object in the ledger instance variable.')
-
-#     def test_withdraw_no_description(self):  # good
-#         self.food.deposit(900, "deposit")
-#         good_withdraw = self.food.withdraw(45.67)
-#         actual = self.food.ledger[1]
-#         expected = {"amount": -45.67, "description": ""}
-#         self.assertEqual(
-#             actual, expected, 'Expected `withdraw` method with no description to create a blank description.')
-#         self.assertEqual(good_withdraw, True,
-#                          'Expected `transfer` method to return `True`.')
-
-#     def test_get_balance(self):  # good
-#         self.food.deposit(900, "deposit")
-#         self.food.withdraw(45.67, "milk, cereal, eggs, bacon, bread")
-#         actual = self.food.get_balance()
-#         expected = 854.33
-#         self.assertEqual(actual, expected, 'Expected balance to be 854.33')
-
-#     def test_transfer(self):  # all good
-#         self.food.deposit(900, "deposit")
-#         self.food.withdraw(45.67, "milk, cereal, eggs, bacon, bread")
-#         good_transfer = self.food.transfer(20, self.entertainment)
-#         actual = self.food.ledger[2]
-#         expected = {"amount": -20, "description": "Transfer to Entertainment"}
-#         self.assertEqual(
-#             actual, expected, 'Expected `transfer` method to create a specific ledger item in food object.')
-#         self.assertEqual(good_transfer, True,
-#                          'Expected `transfer` method to return `True`.')
-#         actual = self.entertainment.ledger[0]
-#         expected = {"amount": 20, "description": "Transfer from Food"}
-#         self.assertEqual(
-#             actual, expected, 'Expected `transfer` method to create a specific ledger item in entertainment object.')
-
-#     def test_check_funds(self):  # all good
-#         self.food.deposit(10, "deposit")
-#         actual = self.food.check_funds(20)
-#         expected = False
-#         self.assertEqual(actual, expected,
-#                          'Expected `check_funds` method to be False')
-#         actual = self.food.check_funds(10)
-#         expected = True
-#         self.assertEqual(actual, expected,
-#                          'Expected `check_funds` method to be True')
-
-#     def test_withdraw_no_funds(self):  # good
-#         self.food.deposit(100, "deposit")
-#         good_withdraw = self.food.withdraw(100.10)
-#         self.assertEqual(good_withdraw, False,
-#                          'Expected `withdraw` method to return `False`.')
-
-#     def test_transfer_no_funds(self):  # good
-#         self.food.deposit(100, "deposit")
-#         good_transfer = self.food.transfer(200, self.entertainment)
-#         self.assertEqual(good_transfer, False,
-#                          'Expected `transfer` method to return `False`.')
-
-#     def test_to_string(self):  # not good
-#         self.food.deposit(900, "deposit")
-#         self.food.withdraw(45.67, "milk, cereal, eggs, bacon, bread")
-#         self.food.transfer(20, self.entertainment)
-#         actual = str(self.food)
-#         expected = f"*************Food*************\ndeposit                 900.00\nmilk, cereal, eggs, bac -45.67\nTransfer to Entertainme -20.00\nTotal: 834.33"
-#         self.assertEqual(actual, expected,
-#                          'Expected different string representation of object.')
-
-#     def test_create_spend_chart(self):  # definitely not good
-#         self.food.deposit(900, "deposit")
-#         self.entertainment.deposit(900, "deposit")
-#         self.business.deposit(900, "deposit")
-#         self.food.withdraw(105.55)
-#         self.entertainment.withdraw(33.40)
-#         self.business.withdraw(10.99)
-#         actual = create_spend_chart(
-#             [self.business, self.food, self.entertainment])
-#         expected = "Percentage spent by category\n100|          \n 90|          \n 80|          \n 70|    o     \n 60|    o     \n 50|    o     \n 40|    o     \n 30|    o     \n 20|    o  o  \n 10|    o  o  \n  0| o  o  o  \n    ----------\n     B  F  E  \n     u  o  n  \n     s  o  t  \n     i  d  e  \n     n     r  \n     e     t  \n     s     a  \n     s     i  \n           n  \n           m  \n           e  \n           n  \n           t  "
-#         self.assertEqual(
-#             actual, expected, 'Expected different chart representation. Check that all spacing is exact.')
+        num_people = 7
+        actual_length = len(make_group_of_people(num_people))
+        expected_length = num_people
+        actual_type = isinstance(make_group_of_people(
+            num_people), list)
+        expected_type = True
+        actual_index_type = isinstance(
+            make_group_of_people(num_people)[choice(range(0, num_people))], Person)
+        expected_index_type = True
+        self.assertEqual(actual_length, expected_length,
+                         'Expected make_group_people(7) to return a list of length 7.')
+        self.assertEqual(actual_type, expected_type,
+                         'Expected make_group_people(7) to produce a list.')
+        self.assertEqual(actual_index_type, expected_index_type,
+                         'Expected make_group_people(7) to return a list of objects of type Person.')
 
 
 # if __name__ == "__main__":

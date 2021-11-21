@@ -72,17 +72,10 @@ def complete_form(num_times):
             "docssharedWizToggleLabeledLabelText.exportLabel.freebirdFormviewerComponentsQuestionCheckboxLabel")
 
         # https://stackoverflow.com/questions/20996392/how-to-get-text-with-selenium-webdriver-in-python
-        # # creates a list of all locations present on the form (not sure if needed any more)
-        # area_location_labels = [
-        #     area.text for area in area_checkboxes if isinstance(area.text, str)]
-        # print(area_location_labels)
-        geographic_area = person.get_geographic_area()
-        # print(geographic_area)
         # https://stackoverflow.com/questions/2361426/get-the-first-item-from-an-iterable-that-matches-a-condition
+        geographic_area = person.get_geographic_area()
         form_geographic_area_index = next((area_index for area_index in range(
             0, len(area_checkboxes)) if area_checkboxes[area_index].text == geographic_area), None)
-
-        # print(form_geographic_area_index)
 
         # checks the corresponding geographic area checkbox
         if form_geographic_area_index:
@@ -92,7 +85,7 @@ def complete_form(num_times):
         # sends in the city and state
         city = textboxes[4]
         city.send_keys(
-            f"{get_city_from_city_and_state(person.city_and_state)}, {get_state_from_city_and_state(person.city_and_state)}")
+            f"{people.index(person)}:  {get_city_from_city_and_state(person.city_and_state)}, {get_state_from_city_and_state(person.city_and_state)}")
         sleep(choice(seconds))
 
         # submits the form
@@ -110,7 +103,7 @@ def complete_form(num_times):
             another_response.click()
             sleep(choice(seconds))
         else:
-            print("Last person")
+            print(f"{person.first_name} {person.last_name} from {get_city_from_city_and_state(person.city_and_state)}, {get_state_from_city_and_state(person.city_and_state)} was the last person.")
 
     driver.quit()
 
