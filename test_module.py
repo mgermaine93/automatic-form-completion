@@ -1,7 +1,5 @@
-from random import randint, choice
+from random import choice
 from collections.abc import Mapping
-from collections import defaultdict
-from csv import reader
 from constants.us_state_abbreviations import US_STATE_TO_ABBREVIATIONS
 from constants.areas_and_cities import AREAS_AND_CITIES
 import unittest
