@@ -85,7 +85,7 @@ def complete_form(num_times):
         # sends in the city and state
         city = textboxes[4]
         city.send_keys(
-            f"{people.index(person)}:  {get_city_from_city_and_state(person.city_and_state)}, {get_state_from_city_and_state(person.city_and_state)}")
+            f"{get_city_from_city_and_state(person.city_and_state)}, {get_state_from_city_and_state(person.city_and_state)}")
         sleep(choice(seconds))
 
         # submits the form
@@ -108,4 +108,4 @@ def complete_form(num_times):
     driver.quit()
 
 
-complete_form(2)
+complete_form(5)
