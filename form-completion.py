@@ -1,6 +1,5 @@
 # https://www.youtube.com/watch?v=_ST_6heCS2I
 from dotenv import load_dotenv
-import urllib
 from random import choice
 import os
 from time import sleep
@@ -8,14 +7,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-
+from selenium.common.exceptions import NoSuchElementException
 from person import (
-    make_group_of_people,
+    make_group_of_people
+)
+from functions import (
     get_city_from_city_and_state,
     get_state_from_city_and_state
 )
-
-# from functions import generate_first_name, generate_last_name
 
 optionsforchrome = Options()
 optionsforchrome.add_argument('--no-sandbox')
@@ -44,9 +43,13 @@ def complete_form(num_times):
 
         sleep(choice(seconds))
 
-        # retrieves a list of all available textboxes (should be 5 items with the current link)
-        textboxes = driver.find_elements_by_class_name(
-            "quantumWizTextinputPaperinputInput.exportInput")
+        if driver.find_elements_by_class_name("quantumWizTextinputPaperinputInput.exportInput"):
+            # retrieves a list of all available textboxes (should be 5 items with the current link)
+            textboxes = driver.find_elements_by_class_name(
+                "quantumWizTextinputPaperinputInput.exportInput")
+        else:
+            raise NoSuchElementException(
+                "Could not find a list of textboxes.  Either the class name is incorrect in the script, or something changed with the form.")
 
         # sends in the first name
         first_name = textboxes[0]
@@ -68,8 +71,13 @@ def complete_form(num_times):
         email_address.send_keys(person.generate_email_address())
         sleep(choice(seconds))
 
-        area_checkboxes = driver.find_elements_by_class_name(
-            "docssharedWizToggleLabeledLabelText.exportLabel.freebirdFormviewerComponentsQuestionCheckboxLabel")
+        if driver.find_elements_by_class_name(
+                "docssharedWizToggleLabeledLabelText.exportLabel.freebirdFormviewerComponentsQuestionCheckboxLabel"):
+            area_checkboxes = driver.find_elements_by_class_name(
+                "docssharedWizToggleLabeledLabelText.exportLabel.freebirdFormviewerComponentsQuestionCheckboxLabel")
+        else:
+            raise NoSuchElementException(
+                "Could not find a list of checkboxes.  Something must be different with the form.")
 
         # https://stackoverflow.com/questions/20996392/how-to-get-text-with-selenium-webdriver-in-python
         # https://stackoverflow.com/questions/2361426/get-the-first-item-from-an-iterable-that-matches-a-condition
@@ -89,8 +97,13 @@ def complete_form(num_times):
         sleep(choice(seconds))
 
         # submits the form
-        submit_button = driver.find_element_by_class_name(
-            "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel")
+        if driver.find_element_by_class_name(
+                "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel"):
+            submit_button = driver.find_element_by_class_name(
+                "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel")
+        else:
+            raise NoSuchElementException(
+                "Could not find a submit button.  Either the class name of the button has changed, or something is different with the form.")
         submit_button.click()
         sleep(choice(seconds))
 
@@ -108,4 +121,4 @@ def complete_form(num_times):
     driver.quit()
 
 
-complete_form(5)
+# complete_form(3)

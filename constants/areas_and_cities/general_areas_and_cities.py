@@ -23,7 +23,7 @@ from constants.texas import *
 from constants.virginia import *
 from constants.wisconsin import *
 
-AREAS_AND_CITIES = {
+GENERAL_AREAS_AND_CITIES = {
     "Fort Smith, AR": ARKANSAS_FORT_SMITH,
     "Phoenix, AZ": ARIZONA_PHOENIX,
     "Tucson, AZ": ARIZONA_TUCSON,

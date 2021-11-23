@@ -1,6 +1,8 @@
+# this can be made more object-oriented, particularly with the methods of the Floridian() class.
+
 from random import randint, choice
+from constants.florida_areas_and_cities import FLORIDA_AREAS_AND_CITIES
 from names import get_first_name, get_last_name
-from constants.areas_and_cities.general_areas_and_cities import GENERAL_AREAS_AND_CITIES
 from functions import (
     generate_geographic_area,
     generate_city_and_state,
@@ -9,21 +11,22 @@ from functions import (
     generate_last_seven_digits_of_phone_number,
     get_closest_area_code,
 )
+from person import Person
 
 
-class Person(object):
+class Floridian(Person):
     """
-    A class to represent a person.
+    A class to represent Floridian.  Inherits from class Person.
     ...
 
     Attributes
     ----------
         first_name : str
-            first name of the person, e.g. 'Mario'
+            first name of the person, e.g. 'Tiger'
         last_name : str
-            last name of the person, e.g. 'Lemieux'
+            last name of the person, e.g. 'Woods'
         city_and_state : dict
-            the city and state in which the person resides, e.g. {'Pittsburgh': 'PA}
+            the city and state in which the person resides, e.g. {'Palm Beach': 'FL}
 
     Methods
     -------
@@ -53,7 +56,7 @@ class Person(object):
         self.first_name = first_name or get_first_name()
         self.last_name = last_name or get_last_name()
         self.city_and_state = city_and_state or generate_city_and_state(
-            generate_geographic_area())
+            generate_geographic_area(FLORIDA_AREAS_AND_CITIES))
 
     def generate_email_address(self):
         """
@@ -118,7 +121,7 @@ class Person(object):
             area : str
                 a string representing the person's geographic area of residence, e.g., 'McAllen, TX'
         """
-        for area, cities in GENERAL_AREAS_AND_CITIES.items():
+        for area, cities in FLORIDA_AREAS_AND_CITIES.items():
             if get_city_from_city_and_state(self.city_and_state) in cities:
                 # in case there are cities of the same name in different states
                 if get_state_from_city_and_state(self.city_and_state) in area:
@@ -126,36 +129,3 @@ class Person(object):
         else:
             raise KeyError(
                 f"City {get_city_from_city_and_state(self.city_and_state)} not found in the dictionary of available cities.")
-
-
-def make_group_of_people(num_people):
-    # this might need to be refactored to take in a certain type of person (Floridian, etc.) rather than a Person() object be default.
-    """
-    Returns a list of Person objects.
-
-    Parameters
-    ----------
-        num_people : int
-            an integer representing how many Person objects will be created, e.g., '8'
-        type_person : Person() / class
-            a class or subclass of type Person()
-
-    Returns
-    -------
-        people : list
-            a list of Person objects (see 'Person' object docstring above).
-    """
-    # https://stackoverflow.com/questions/30420621/python-creating-object-instances-in-a-loop-with-independent-handling
-    people = []
-    num = 0
-
-    # need to work on this ... Person is different from Person()
-    # if not inspect.isclass(type_person):
-    #     raise TypeError(
-    #         f"{type_person} is neither a class nor subclass of type Person().")
-
-    while num < num_people:
-        person = Person()
-        people.append(person)
-        num += 1
-    return people
