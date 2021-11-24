@@ -1,4 +1,4 @@
-from constants.florida import (
+from constants.states.florida import (
     FLORIDA_ALACHUA_COUNTY,
     FLORIDA_BAKER_COUNTY,
     FLORIDA_BAY_COUNTY,

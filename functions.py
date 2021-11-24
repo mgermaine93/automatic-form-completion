@@ -1,11 +1,9 @@
 from random import randint, choice
 from constants.areas_and_cities.general_areas_and_cities import GENERAL_AREAS_AND_CITIES
-# from constants.florida_areas_and_cities import FLORIDA_AREAS_AND_CITIES
 from constants.us_state_abbreviations import US_STATE_TO_ABBREVIATIONS
 from csv import reader
 from collections import defaultdict
 from collections.abc import Mapping
-import inspect
 # https://stackoverflow.com/questions/395735/how-to-check-whether-a-variable-is-a-class-or-not
 
 

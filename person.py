@@ -1,4 +1,3 @@
-import inspect
 from collections.abc import Mapping
 from collections import defaultdict
 from csv import reader
@@ -384,13 +383,16 @@ def make_group_of_people(num_people):
     people = []
     num = 0
 
-    # need to work on this ... Person is different from Person()
-    # if not inspect.isclass(type_person):
-    #     raise TypeError(
-    #         f"{type_person} is neither a class nor subclass of type Person().")
-
     while num < num_people:
         person = Person()
         people.append(person)
         num += 1
     return people
+
+
+# person = Person()
+# print(person.first_name)
+# print(person.last_name)
+# print(person.city_and_state)
+# print(person.generate_email_address())
+# print(person.generate_phone_number())
