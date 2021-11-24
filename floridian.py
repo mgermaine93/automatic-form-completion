@@ -1,7 +1,7 @@
 # this can be made more object-oriented, particularly with the methods of the Floridian() class.
 
 from random import randint, choice
-from constants.florida_areas_and_cities import FLORIDA_AREAS_AND_CITIES
+from constants.areas_and_cities.florida_areas_and_cities import FLORIDA_AREAS_AND_CITIES
 from names import get_first_name, get_last_name
 from functions import (
     generate_geographic_area,
@@ -11,121 +11,249 @@ from functions import (
     generate_last_seven_digits_of_phone_number,
     get_closest_area_code,
 )
-from person import Person
+from person import (
+    Person,
+    generate_geographic_area,
+    generate_city_and_state
+)
+
+
+def generate_florida_county():
+    county_and_state = choice(list(FLORIDA_AREAS_AND_CITIES))
+    return county_and_state
+
+
+def generate_florida_city_and_state(geographic_area):
+    """
+    Needs docstring
+    """
+    if geographic_area in FLORIDA_AREAS_AND_CITIES.keys():
+        city_and_state = {}
+        city = choice(FLORIDA_AREAS_AND_CITIES[geographic_area])
+        state = geographic_area[-2:]
+        city_and_state[city] = state
+        return city_and_state
+    else:
+        raise KeyError(
+            f"{geographic_area} wasn't found in the list of available geographic areas.")
 
 
 class Floridian(Person):
-    """
-    A class to represent Floridian.  Inherits from class Person.
-    ...
-
-    Attributes
-    ----------
-        first_name : str
-            first name of the person, e.g. 'Tiger'
-        last_name : str
-            last name of the person, e.g. 'Woods'
-        city_and_state : dict
-            the city and state in which the person resides, e.g. {'Palm Beach': 'FL}
-
-    Methods
-    -------
-        generate_email_address():
-            Returns an email address that was constructed from the person's first name and last name.
-        generate_phone_number():
-            Returns a phone number that was constructed using the closest area code to the person's geographic area and/or city and state
-        get_geographic_area():
-            Returns the geographic area in which the person resides, based on their city and state.
-    """
 
     def __init__(self, first_name=None, last_name=None, city_and_state=None):
-        """
-        Constructs all the necessary attributes for the person object.
-
-        If no attributes are supplied to the person object, random values for the first_name, last_name, and city_and_state attributes will be generated automatically.
-
-        Parameters
-        ----------
-            first_name : str
-                first name of the person
-            last_name : str
-                last name of the person
-            city_and_state : dict
-                the city and state in which the person resides, e.g., {'Fort Smith':'AR'}
-        """
-        self.first_name = first_name or get_first_name()
-        self.last_name = last_name or get_last_name()
-        self.city_and_state = city_and_state or generate_city_and_state(
-            generate_geographic_area(FLORIDA_AREAS_AND_CITIES))
-
-    def generate_email_address(self):
-        """
-        Returns an email address that was generated using the person's first name and last name.
-
-        Parameters
-        ----------
-            None needed
-
-        Returns
-        -------
-            email_address : str 
-                a string representing the person's email address, e.g., 'tony.delvecchio2006@outlook.com'
-        """
-        first_name_index = randint(1, len(self.first_name))
-        last_name_index = randint(1, len(self.last_name))
-        first_name_segment = self.first_name.lower()[0:first_name_index]
-        last_name_segment = self.last_name.lower()[0:last_name_index]
-        random_number = randint(0, 100)
-        providers = [
-            "gmail.com",
-            "outlook.com",
-            "yahoo.com",
-            "hotmail.com",
-            "aol.com",
-            "comcast.net",
-            "verizon.net",
-            "comcast.net"
-        ]
-        email_address = f"{first_name_segment}{last_name_segment}{random_number}@{choice(providers)}"
-        return email_address
-
-    def generate_phone_number(self):
-        """
-        Returns a phone number that was generated using the person's city and state.
-
-        Parameters
-        ----------
-            None needed
-
-        Returns
-        -------
-            phone_number : (str) 
-                a string representing the person's phone number, e.g., '800-588-2300'
-        """
-        first_three = get_closest_area_code(get_state_from_city_and_state(
-            self.city_and_state), get_city_from_city_and_state(self.city_and_state))
-        last_seven = generate_last_seven_digits_of_phone_number()
-        phone_number = f"{first_three}-{last_seven}"
-        return phone_number
+        super().__init__(first_name=first_name, last_name=last_name)
+        self.city_and_state = city_and_state or generate_florida_city_and_state(
+            generate_florida_county())
 
     def get_geographic_area(self):
-        """
-        Returns a geographic area that was generated using the person's city and state.
+        # https://stackoverflow.com/questions/231839/python-inheritance-how-to-disable-a-function
+        raise AttributeError(
+            "'Floridian' object has no attribute 'get_geographic_area().'")
 
-        Parameters
-        ----------
-            None needed
+    def get_city(self):
+        return list(self.city_and_state.keys())[0]
 
-        Returns
-        -------
-            area : str
-                a string representing the person's geographic area of residence, e.g., 'McAllen, TX'
-        """
-        for area, cities in FLORIDA_AREAS_AND_CITIES.items():
-            if get_city_from_city_and_state(self.city_and_state) in cities:
-                # in case there are cities of the same name in different states
-                if get_state_from_city_and_state(self.city_and_state) in area:
-                    return area
-        else:
-            raise KeyError(
-                f"City {get_city_from_city_and_state(self.city_and_state)} not found in the dictionary of available cities.")
+    def get_county(self):
+        counties = FLORIDA_AREAS_AND_CITIES
+        city = list(self.city_and_state.keys())[0]
+        for county in counties:
+            if city in FLORIDA_AREAS_AND_CITIES[county]:
+                return county
+        raise KeyError(
+            f"{city} was not found in the available dictionary of Florida cities and counties.")
+
+    def get_group(self):
+        pass
+
+
+def get_words():
+    words = {
+        "political_stance": [
+            "Liberal",
+            "Conservative",
+            "Independent",
+            "Communist",
+            "Federalist",
+            "Socialist",
+            "Anarchist",
+            "Libertarian",
+            "Democratic",
+            "Moderate",
+            "Centrist",
+            "Marxist"
+        ],
+        "single_phrase": [
+            "Like it's 1999",
+            "All Tomorrow's",
+            "Pity",
+            "Thank You Based God",
+            "Surprise",
+            "LAN",
+            "Costume",
+            "Slumber",
+            "Stop & Frisk",
+            "Bring Back Arrested Development",
+            "Free Gucci",
+            "Tread on Me",
+            "Iced Tea",
+            "Pizza",
+            "After",
+            "Paid Vacation"
+        ],
+        "tax_person": [
+            "the Rich",
+            "the Poor",
+            "Everybody",
+            "Grandma",
+            "Our Children",
+            "the Future",
+            "Nobody",
+            "America's Job Creators",
+            "the Huddled Masses",
+            "Freedom",
+            "the Dead"
+        ],
+        "political_people": [
+            "Liberal",
+            "Conservative",
+            "Independent",
+            "Communist",
+            "Federalist",
+            "Socialist",
+            "Anarchist",
+            "Libertarian",
+            "Democratic",
+            "Moderate",
+            "Centrist",
+            "Revolutionary",
+            "Marxist",
+            "Bolshevik",
+            "Single Moms",
+            "Orphans",
+            "Children",
+            "Seniors",
+            "Grandmas",
+            "Nudist"
+        ],
+        "political_stance_noun": [
+            "Goon",
+            "Agitator",
+            "Loafer",
+            "Thug",
+            "Riff-Raff",
+            "Freeloader",
+            "Crusader",
+            "Convict",
+            "Martyr",
+            "Jerk",
+            "Blowhard",
+            "Saint",
+            "Backlash",
+            "Rage",
+            "Venom",
+            "Revolution",
+            "Firestorm"
+        ],
+        "adjectives": [
+            "New",
+            "Athletic",
+            "Superior",
+            "Lazy",
+            "Indulgent",
+            "Angry",
+            "Crazed",
+            "Apathetic",
+            "Jaded",
+            "Salivating",
+            "Rambunctious",
+            "Bleeding Heart",
+            "Manipulative",
+            "Caffeinated",
+            "Overhyped",
+            "Incompetent",
+            "Inconsiderate",
+            "Evil",
+            "Valiant",
+            "Stoic",
+            "Working",
+            "Modern",
+            "Old-Fashioned"
+        ],
+        "put_nouns": [
+            "Our Children",
+            "Wildlife",
+            "the Environment",
+            "Freedom", "Sanity",
+            "Compassion",
+            "Pizza",
+            "Transportation",
+            "the Economy",
+            "Total War",
+            "Equal Rights",
+            "Seniors",
+            "Waste Management",
+            "the Proletariat",
+            "Currency Manipulation",
+            "Tradition",
+            "Families",
+            "Justice",
+            "the Rich",
+            "the Poor",
+            "World Domination",
+            "Labor"
+        ],
+        "general_nouns": [
+            "Wildlife",
+            "Alcohol",
+            "Marijuana",
+            "Fun",
+            "Taxes",
+            "Prohibition",
+            "Pizza",
+            "Cash",
+            "Gold",
+            "Freedom",
+            "Poverty",
+            "Values",
+            "Chaos",
+            "Platinum",
+            "Equality",
+            "Exceptionalism",
+            "Jingoism",
+            "Lunch Breaks"
+        ],
+        "beginning": [
+            "Modern",
+            "Anti-",
+            "Pro-",
+            "New",
+            "Never-Ending",
+            "Forever",
+            "No",
+            "National",
+            "American",
+            "United",
+            "Classic",
+            "Traditional",
+            "Organized",
+            "Grassroots",
+            "Patriots for",
+            "Americans for",
+            "Old-Fashioned"
+        ],
+        "order": [
+            "First",
+            "Last",
+            "Somewhere in the Middle of Our Priorities",
+            "Off Until Tomorrow"
+        ]
+    }
+    return words
+
+
+# floridian = Floridian()
+# print(floridian.first_name)
+# print(floridian.last_name)
+# print(floridian.city_and_state)
+# print(floridian.get_county())
+# print(floridian.generate_phone_number())

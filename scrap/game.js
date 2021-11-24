@@ -75,28 +75,6 @@ function makeName (version) {
                         
 			
 	}
-	
-	
-	// put up spinner
-	$('#words-container').html("<img src='images/spinner.gif'>&nbsp;");
-	
-	setTimeout(function () { 
-		
-			// put the words on the page
-			// after one second
-			
-			$('#words-container').html(pac_name);
-
-			// change the text to tweet out
-			var tweet_html;
-			tweet_html = "<span class='like-it'>Like it? Tweet it!</span><br><a href=\"http://twitter.com/share\" class=\"twitter-share-button\" data-url=\"http://wny.cc/Lv9rwO\" data-count=\"none\" data-text=\"'" + pac_name +"' - My random political party name generated at @afreecountry |\">Tweet</a><script type=\"text/javascript\" src=\"https://platform.twitter.com/widgets.js\"></script>";
-			
-			$('#twitter_button').html(tweet_html);
-		
-	}, 800);
-	
-
-
 }
 
 function playGame() {

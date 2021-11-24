@@ -31,7 +31,7 @@ def generate_geographic_area(state_area=None):
     return geographic_area
 
 
-def generate_city_and_state(geographic_area):
+def generate_city_and_state(geographic_area, areas=GENERAL_AREAS_AND_CITIES):
     """
     Returns a random city and state from within a given US-based geographic area, if one is found.
 
@@ -45,9 +45,9 @@ def generate_city_and_state(geographic_area):
         city_and_state : dict
             a US-based city and state, e.g., 'PA'
     """
-    if geographic_area in GENERAL_AREAS_AND_CITIES.keys():
+    if geographic_area in areas.keys():
         city_and_state = {}
-        city = choice(GENERAL_AREAS_AND_CITIES[geographic_area])
+        city = choice(areas[geographic_area])
         state = geographic_area[-2:]
         city_and_state[city] = state
         return city_and_state
