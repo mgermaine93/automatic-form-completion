@@ -154,4 +154,4 @@ def complete_florida_form(num_times):
     driver.quit()
 
 
-# complete_florida_form(3)
+complete_florida_form(3)

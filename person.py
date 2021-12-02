@@ -41,7 +41,7 @@ def generate_city_and_state(geographic_area):
     Returns
     -------
         city_and_state : dict
-            a US-based city and state, e.g., 'PA'
+            a US-based city and state, e.g., {"Darby": "PA"}
     """
     if geographic_area in GENERAL_AREAS_AND_CITIES.keys():
         city_and_state = {}
