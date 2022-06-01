@@ -1,0 +1,921 @@
+City,State short,State full,County,City alias
+Arvada,CO,Colorado,JEFFERSON,Arvada
+Arvada,CO,Colorado,JEFFERSON,Westminster
+Aurora,CO,Colorado,ARAPAHOE,Aurora
+Aurora,CO,Colorado,ADAMS,Buckley AFB
+Aurora,CO,Colorado,ADAMS,Buckley Air Force Base
+Aurora,CO,Colorado,ADAMS,Buckley Ang
+Aurora,CO,Colorado,ADAMS,Buckley Air Natl Guard Base
+Aurora,CO,Colorado,ADAMS,Aurora
+Aurora,CO,Colorado,ARAPAHOE,Denver
+Aurora,CO,Colorado,ARAPAHOE,Centennial
+Aurora,CO,Colorado,ARAPAHOE,Foxfield
+Broomfield,CO,Colorado,BROOMFIELD,Westminster
+Broomfield,CO,Colorado,BROOMFIELD,Broomfield
+Broomfield,CO,Colorado,JEFFERSON,Broomfield
+Broomfield,CO,Colorado,JEFFERSON,Westminster
+Commerce City,CO,Colorado,ADAMS,Denver
+Commerce City,CO,Colorado,ADAMS,Commerce City
+Commerce City,CO,Colorado,ADAMS,Irondale
+Broomfield,CO,Colorado,BROOMFIELD,Thornton
+Dupont,CO,Colorado,ADAMS,Dupont
+Eldorado Springs,CO,Colorado,BOULDER,Eldorado Springs
+Eldorado Springs,CO,Colorado,BOULDER,Eldorado Sprg
+Lafayette,CO,Colorado,BOULDER,Lafayette
+Louisville,CO,Colorado,BOULDER,Louisville
+Louisville,CO,Colorado,BOULDER,Superior
+Westminster,CO,Colorado,ADAMS,Westminster
+Wheat Ridge,CO,Colorado,JEFFERSON,Denver
+Wheat Ridge,CO,Colorado,JEFFERSON,Wheat Ridge
+Agate,CO,Colorado,ELBERT,Agate
+Bennett,CO,Colorado,ADAMS,Bennett
+Byers,CO,Colorado,ARAPAHOE,Byers
+Castle Rock,CO,Colorado,DOUGLAS,Castle Rock
+Deer Trail,CO,Colorado,ARAPAHOE,Deer Trail
+Elbert,CO,Colorado,EL PASO,Black Forest
+Elbert,CO,Colorado,EL PASO,Elbert
+Elizabeth,CO,Colorado,ELBERT,Elizabeth
+Castle Rock,CO,Colorado,DOUGLAS,Castle Pines
+Englewood,CO,Colorado,ARAPAHOE,Greenwood Village
+Englewood,CO,Colorado,ARAPAHOE,Sheridan
+Englewood,CO,Colorado,ARAPAHOE,Greenwood Vlg
+Englewood,CO,Colorado,ARAPAHOE,Cherry Hl Vlg
+Englewood,CO,Colorado,ARAPAHOE,Cherry Hills Village
+Englewood,CO,Colorado,ARAPAHOE,Cherry Hills
+Englewood,CO,Colorado,ARAPAHOE,Englewood
+Englewood,CO,Colorado,ARAPAHOE,Centennial
+Englewood,CO,Colorado,ARAPAHOE,Lone Tree
+Franktown,CO,Colorado,DOUGLAS,Franktown
+Kiowa,CO,Colorado,ELBERT,Kiowa
+Larkspur,CO,Colorado,DOUGLAS,Larkspur
+Littleton,CO,Colorado,ARAPAHOE,Littleton
+Littleton,CO,Colorado,ARAPAHOE,Greenwood Vlg
+Littleton,CO,Colorado,ARAPAHOE,Cherry Hills Village
+Littleton,CO,Colorado,ARAPAHOE,Cherry Hl Vlg
+Littleton,CO,Colorado,ARAPAHOE,Grants Ranch
+Littleton,CO,Colorado,ARAPAHOE,Centennial
+Littleton,CO,Colorado,ARAPAHOE,Greenwood Village
+Littleton,CO,Colorado,ARAPAHOE,Cherry Hills
+Littleton,CO,Colorado,JEFFERSON,Littleton
+Littleton,CO,Colorado,JEFFERSON,Bow Mar
+Littleton,CO,Colorado,JEFFERSON,Grants Ranch
+Littleton,CO,Colorado,JEFFERSON,Columbine Vly
+Littleton,CO,Colorado,JEFFERSON,Columbine Valley
+Littleton,CO,Colorado,JEFFERSON,Centennial
+Littleton,CO,Colorado,JEFFERSON,Denver
+Littleton,CO,Colorado,JEFFERSON,Lakewood
+Lone Tree,CO,Colorado,DOUGLAS,Lonetree
+Lone Tree,CO,Colorado,DOUGLAS,Littleton
+Lone Tree,CO,Colorado,DOUGLAS,Lone Tree
+Littleton,CO,Colorado,DOUGLAS,Littleton
+Littleton,CO,Colorado,DOUGLAS,Roxborough
+Littleton,CO,Colorado,DOUGLAS,Hghlnds Ranch
+Littleton,CO,Colorado,DOUGLAS,Highlands Ranch
+Louviers,CO,Colorado,DOUGLAS,Louviers
+Monument,CO,Colorado,EL PASO,Monument
+Monument,CO,Colorado,EL PASO,Woodmoor
+Palmer Lake,CO,Colorado,EL PASO,Palmer Lake
+Parker,CO,Colorado,DOUGLAS,Parker
+Sedalia,CO,Colorado,DOUGLAS,Deckers
+Sedalia,CO,Colorado,DOUGLAS,Sedalia
+Strasburg,CO,Colorado,ADAMS,Strasburg
+Watkins,CO,Colorado,ADAMS,Watkins
+Littleton,CO,Colorado,ARAPAHOE,Littleton City Offices
+Littleton,CO,Colorado,ARAPAHOE,Arapahoe County Offices
+Denver,CO,Colorado,DENVER,Denver
+Denver,CO,Colorado,DENVER,University Of Denver
+Denver,CO,Colorado,DENVER,Wheat Ridge
+Denver,CO,Colorado,DENVER,Lakeside
+Denver,CO,Colorado,JEFFERSON,Edgewater
+Denver,CO,Colorado,JEFFERSON,Lakewood
+Denver,CO,Colorado,JEFFERSON,Wheat Ridge
+Denver,CO,Colorado,JEFFERSON,Denver
+Denver,CO,Colorado,ADAMS,Westminster
+Denver,CO,Colorado,ADAMS,Northglenn
+Denver,CO,Colorado,ADAMS,Denver
+Denver,CO,Colorado,ADAMS,Federal Hgts
+Denver,CO,Colorado,ADAMS,Federal Heights
+Denver,CO,Colorado,ADAMS,Thornton
+Denver,CO,Colorado,JEFFERSON,Denver Federal Center
+Denver,CO,Colorado,ADAMS,Welby
+Denver,CO,Colorado,DENVER,Montclair
+Denver,CO,Colorado,DENVER,Lowry
+Denver,CO,Colorado,ADAMS,North Glenn
+Denver,CO,Colorado,DENVER,Lakewood
+Denver,CO,Colorado,DENVER,Fort Logan
+Denver,CO,Colorado,DENVER,Ft Logan
+Denver,CO,Colorado,DENVER,Montbello
+Thornton,CO,Colorado,ADAMS,Northglenn
+Thornton,CO,Colorado,ADAMS,Westminster
+Thornton,CO,Colorado,ADAMS,Denver
+Thornton,CO,Colorado,ADAMS,East Lake
+Thornton,CO,Colorado,ADAMS,Thornton
+Denver,CO,Colorado,DENVER,Co Dmv Dept Of Rev
+Denver,CO,Colorado,DENVER,Us West Communications
+Denver,CO,Colorado,DENVER,Glendale
+Denver,CO,Colorado,ARAPAHOE,Aurora
+Denver,CO,Colorado,ARAPAHOE,Denver
+Denver,CO,Colorado,DENVER,National Farmers Union
+Denver,CO,Colorado,DENVER,Bank Of America
+Denver,CO,Colorado,DENVER,Us Bank
+Denver,CO,Colorado,DENVER,Us Court Of Appeals 10th Cir
+Denver,CO,Colorado,DENVER,Small Business Adm
+Denver,CO,Colorado,DENVER,Co Dept Of Revenue
+Denver,CO,Colorado,DENVER,Univ Of Colorado Med Ctr
+Denver,CO,Colorado,DENVER,Affiliated Banks Service Co
+Denver,CO,Colorado,DENVER,Wells Fargo Bank
+Denver,CO,Colorado,DENVER,Blue Cross Blue Shield Of Co
+Denver,CO,Colorado,DENVER,Af Acctg & Finance Ctr
+Denver,CO,Colorado,DENVER,Af Reserve Pers Ctr
+Denver,CO,Colorado,DENVER,Federal Bldg/us Courthouse
+Denver,CO,Colorado,DENVER,Western Area Usps
+Boulder,CO,Colorado,BOULDER,Boulder
+Boulder,CO,Colorado,BOULDER,University Of Colorado
+Boulder,CO,Colorado,BOULDER,Residence Halls Univ Of Co
+Boulder,CO,Colorado,BOULDER,Ibm Corp
+Boulder,CO,Colorado,BOULDER,Neodata Business Reply
+Boulder,CO,Colorado,BOULDER,Neodata
+Golden,CO,Colorado,JEFFERSON,Evergreen
+Golden,CO,Colorado,JEFFERSON,Lakewood
+Golden,CO,Colorado,JEFFERSON,Golden
+Golden,CO,Colorado,JEFFERSON,Arvada
+Golden,CO,Colorado,JEFFERSON,Blackhawk
+Golden,CO,Colorado,JEFFERSON,Jefferson County
+Alma,CO,Colorado,PARK,Alma
+Bailey,CO,Colorado,PARK,Bailey
+Black Hawk,CO,Colorado,GILPIN,Black Hawk
+Black Hawk,CO,Colorado,GILPIN,Blackhawk
+Bond,CO,Colorado,EAGLE,Bond
+Breckenridge,CO,Colorado,SUMMIT,Breckenridge
+Breckenridge,CO,Colorado,SUMMIT,Blue River
+Buffalo Creek,CO,Colorado,JEFFERSON,Buffalo Creek
+Burns,CO,Colorado,EAGLE,Burns
+Central City,CO,Colorado,GILPIN,Central City
+Clark,CO,Colorado,ROUTT,Clark
+Climax,CO,Colorado,LAKE,Leadville
+Climax,CO,Colorado,LAKE,Climax
+Coalmont,CO,Colorado,JACKSON,Coalmont
+Coalmont,CO,Colorado,JACKSON,Walden
+Como,CO,Colorado,PARK,Fairplay
+Como,CO,Colorado,PARK,Como
+Conifer,CO,Colorado,JEFFERSON,Aspen Park
+Conifer,CO,Colorado,JEFFERSON,Conifer
+Conifer,CO,Colorado,JEFFERSON,Foxton
+Cowdrey,CO,Colorado,JACKSON,Cowdrey
+Dillon,CO,Colorado,SUMMIT,Keystone
+Dillon,CO,Colorado,SUMMIT,Dillon
+Dillon,CO,Colorado,SUMMIT,Montezuma
+Dumont,CO,Colorado,CLEAR CREEK,Dumont
+Evergreen,CO,Colorado,JEFFERSON,Evergreen
+Empire,CO,Colorado,CLEAR CREEK,Empire
+Evergreen,CO,Colorado,JEFFERSON,Golden
+Fairplay,CO,Colorado,PARK,Fairplay
+Fraser,CO,Colorado,GRAND,Fraser
+Frisco,CO,Colorado,SUMMIT,Copper Mtn
+Frisco,CO,Colorado,SUMMIT,Frisco
+Georgetown,CO,Colorado,CLEAR CREEK,Georgetown
+Granby,CO,Colorado,GRAND,Silvercreek
+Granby,CO,Colorado,GRAND,Granby
+Grand Lake,CO,Colorado,GRAND,Grand Lake
+Grant,CO,Colorado,PARK,Grant
+Hartsel,CO,Colorado,PARK,Hartsel
+Hot Sulphur Springs,CO,Colorado,GRAND,Hot Sulphur Springs
+Hot Sulphur Springs,CO,Colorado,GRAND,Hot Slphr Spr
+Idaho Springs,CO,Colorado,CLEAR CREEK,Idaho Springs
+Idledale,CO,Colorado,JEFFERSON,Idledale
+Indian Hills,CO,Colorado,JEFFERSON,Indian Hills
+Jamestown,CO,Colorado,BOULDER,Jamestown
+Jefferson,CO,Colorado,PARK,Jefferson
+Jefferson,CO,Colorado,PARK,Fairplay
+Kittredge,CO,Colorado,JEFFERSON,Kittredge
+Kremmling,CO,Colorado,GRAND,Kremmling
+Leadville,CO,Colorado,LAKE,Leadville
+Mc Coy,CO,Colorado,EAGLE,Mc Coy
+Morrison,CO,Colorado,JEFFERSON,Morrison
+Nederland,CO,Colorado,BOULDER,Nederland
+Oak Creek,CO,Colorado,ROUTT,Oak Creek
+Parshall,CO,Colorado,GRAND,Parshall
+Phippsburg,CO,Colorado,ROUTT,Phippsburg
+Pine,CO,Colorado,JEFFERSON,Pine
+Pinecliffe,CO,Colorado,BOULDER,Pinecliffe
+Rand,CO,Colorado,JACKSON,Rand
+Rollinsville,CO,Colorado,GILPIN,Rollinsville
+Shawnee,CO,Colorado,PARK,Shawnee
+Silver Plume,CO,Colorado,CLEAR CREEK,Silver Plume
+Steamboat Springs,CO,Colorado,ROUTT,Steamboat Springs
+Steamboat Springs,CO,Colorado,ROUTT,Steamboat Spr
+Steamboat Springs,CO,Colorado,ROUTT,Steamboat
+Tabernash,CO,Colorado,GRAND,Tabernash
+Toponas,CO,Colorado,ROUTT,Toponas
+Walden,CO,Colorado,JACKSON,Walden
+Ward,CO,Colorado,BOULDER,Ward
+Winter Park,CO,Colorado,GRAND,Winter Park
+Yampa,CO,Colorado,ROUTT,Yampa
+Silverthorne,CO,Colorado,SUMMIT,Silverthorne
+Silverthorne,CO,Colorado,SUMMIT,Heeney
+Longmont,CO,Colorado,BOULDER,Longmont
+Longmont,CO,Colorado,BOULDER,Niwot
+Longmont,CO,Colorado,WELD,Firestone
+Longmont,CO,Colorado,WELD,Niwot
+Longmont,CO,Colorado,WELD,Longmont
+Longmont,CO,Colorado,WELD,Frederick
+Allenspark,CO,Colorado,BOULDER,Allenspark
+Estes Park,CO,Colorado,LARIMER,Estes Park
+Bellvue,CO,Colorado,LARIMER,Bellvue
+Berthoud,CO,Colorado,LARIMER,Berthoud
+Dacono,CO,Colorado,WELD,Erie
+Dacono,CO,Colorado,WELD,Dacono
+Drake,CO,Colorado,LARIMER,Drake
+Erie,CO,Colorado,BOULDER,Erie
+Erie,CO,Colorado,BOULDER,Frederick
+Estes Park,CO,Colorado,LARIMER,Rocky Mountain National Park
+Firestone,CO,Colorado,WELD,Firestone
+Fort Collins,CO,Colorado,LARIMER,Ft Collins
+Fort Collins,CO,Colorado,LARIMER,Fort Collins
+Fort Collins,CO,Colorado,LARIMER,Colorado State University
+Fort Collins,CO,Colorado,LARIMER,Severance
+Fort Collins,CO,Colorado,LARIMER,Windsor
+Frederick,CO,Colorado,WELD,Frederick
+Glen Haven,CO,Colorado,LARIMER,Glen Haven
+Hygiene,CO,Colorado,BOULDER,Hygiene
+Johnstown,CO,Colorado,WELD,Johnstown
+Johnstown,CO,Colorado,WELD,Loveland
+Laporte,CO,Colorado,LARIMER,Laporte
+Livermore,CO,Colorado,LARIMER,Virginia Dale
+Livermore,CO,Colorado,LARIMER,Livermore
+Loveland,CO,Colorado,LARIMER,Loveland
+Lyons,CO,Colorado,BOULDER,Lyons
+Masonville,CO,Colorado,LARIMER,Masonville
+Mead,CO,Colorado,WELD,Mead
+Milliken,CO,Colorado,WELD,Milliken
+Niwot,CO,Colorado,BOULDER,Niwot
+Red Feather Lakes,CO,Colorado,LARIMER,Red Feather Lakes
+Red Feather Lakes,CO,Colorado,LARIMER,Red Fe Lks
+Severance,CO,Colorado,WELD,Severance
+Timnath,CO,Colorado,LARIMER,Timnath
+Wellington,CO,Colorado,LARIMER,Wellington
+Windsor,CO,Colorado,WELD,Severance
+Windsor,CO,Colorado,WELD,Windsor
+Windsor,CO,Colorado,WELD,Eastman Kodak Co
+Fort Collins,CO,Colorado,LARIMER,Teledyne Water Pik
+Brighton,CO,Colorado,ADAMS,Thornton
+Brighton,CO,Colorado,ADAMS,Brighton
+Brighton,CO,Colorado,WELD,Lochbuie
+Brighton,CO,Colorado,WELD,Brighton
+Ault,CO,Colorado,WELD,Ault
+Ault,CO,Colorado,WELD,Severance
+Briggsdale,CO,Colorado,WELD,Briggsdale
+Carr,CO,Colorado,WELD,Carr
+Eastlake,CO,Colorado,ADAMS,Eastlake
+Eaton,CO,Colorado,WELD,Severance
+Eaton,CO,Colorado,WELD,Eaton
+Evans,CO,Colorado,WELD,Evans
+Fort Lupton,CO,Colorado,WELD,Fort Lupton
+Fort Lupton,CO,Colorado,WELD,Ft Lupton
+Fort Lupton,CO,Colorado,WELD,Wattenburg
+Galeton,CO,Colorado,WELD,Galeton
+Gilcrest,CO,Colorado,WELD,Gilcrest
+Gill,CO,Colorado,WELD,Gill
+Greeley,CO,Colorado,WELD,Greeley
+Greeley,CO,Colorado,WELD,Garden City
+Greeley,CO,Colorado,WELD,Evans
+Greeley,CO,Colorado,WELD,State Farm Ins
+Greeley,CO,Colorado,WELD,Univ Of Northern Colorado
+Henderson,CO,Colorado,ADAMS,Henderson
+Hudson,CO,Colorado,WELD,Hudson
+Keenesburg,CO,Colorado,WELD,Keenesburg
+Kersey,CO,Colorado,WELD,Kersey
+La Salle,CO,Colorado,WELD,La Salle
+La Salle,CO,Colorado,WELD,Evans
+Lucerne,CO,Colorado,WELD,Lucerne
+Nunn,CO,Colorado,WELD,Nunn
+Orchard,CO,Colorado,MORGAN,Orchard
+Pierce,CO,Colorado,WELD,Pierce
+Platteville,CO,Colorado,WELD,Platteville
+Roggen,CO,Colorado,WELD,Roggen
+Weldona,CO,Colorado,MORGAN,Weldona
+Wiggins,CO,Colorado,MORGAN,Wiggins
+Wiggins,CO,Colorado,MORGAN,Hoyt
+Fort Morgan,CO,Colorado,MORGAN,Fort Morgan
+Log Lane Village,CO,Colorado,MORGAN,Fort Morgan
+Log Lane Village,CO,Colorado,MORGAN,Log Lane Vlg
+Log Lane Village,CO,Colorado,MORGAN,Log Lane Village
+Akron,CO,Colorado,WASHINGTON,Akron
+Amherst,CO,Colorado,PHILLIPS,Amherst
+Atwood,CO,Colorado,LOGAN,Atwood
+Brush,CO,Colorado,MORGAN,Brush
+Crook,CO,Colorado,LOGAN,Crook
+Eckley,CO,Colorado,YUMA,Eckley
+Fleming,CO,Colorado,LOGAN,Fleming
+Grover,CO,Colorado,WELD,Grover
+Haxtun,CO,Colorado,PHILLIPS,Haxtun
+Hereford,CO,Colorado,WELD,Hereford
+Hillrose,CO,Colorado,MORGAN,Hillrose
+Holyoke,CO,Colorado,PHILLIPS,Holyoke
+Idalia,CO,Colorado,YUMA,Hale
+Idalia,CO,Colorado,YUMA,Idalia
+Iliff,CO,Colorado,LOGAN,Iliff
+Julesburg,CO,Colorado,SEDGWICK,Julesburg
+Lindon,CO,Colorado,WASHINGTON,Lindon
+Merino,CO,Colorado,LOGAN,Merino
+Merino,CO,Colorado,LOGAN,Willard
+New Raymer,CO,Colorado,WELD,Raymer
+New Raymer,CO,Colorado,WELD,New Raymer
+Otis,CO,Colorado,WASHINGTON,Otis
+Ovid,CO,Colorado,SEDGWICK,Ovid
+Padroni,CO,Colorado,LOGAN,Padroni
+Paoli,CO,Colorado,PHILLIPS,Paoli
+Peetz,CO,Colorado,LOGAN,Peetz
+Sedgwick,CO,Colorado,SEDGWICK,Sedgwick
+Snyder,CO,Colorado,MORGAN,Snyder
+Sterling,CO,Colorado,LOGAN,Sterling
+Stoneham,CO,Colorado,WELD,Stoneham
+Vernon,CO,Colorado,YUMA,Vernon
+Woodrow,CO,Colorado,WASHINGTON,Woodrow
+Woodrow,CO,Colorado,WASHINGTON,Last Chance
+Wray,CO,Colorado,YUMA,Laird
+Wray,CO,Colorado,YUMA,Wray
+Yuma,CO,Colorado,YUMA,Yuma
+Anton,CO,Colorado,WASHINGTON,Arickaree
+Anton,CO,Colorado,WASHINGTON,Anton
+Arapahoe,CO,Colorado,CHEYENNE,Arapahoe
+Arriba,CO,Colorado,LINCOLN,Arriba
+Bethune,CO,Colorado,KIT CARSON,Bethune
+Burlington,CO,Colorado,KIT CARSON,Burlington
+Calhan,CO,Colorado,EL PASO,Ellicott
+Calhan,CO,Colorado,EL PASO,Calhan
+Cascade,CO,Colorado,EL PASO,Cascade
+Cascade,CO,Colorado,EL PASO,Chipita Park
+Cheyenne Wells,CO,Colorado,CHEYENNE,Cheyenne Wls
+Cheyenne Wells,CO,Colorado,CHEYENNE,Cheyenne Wells
+Cheyenne Wells,CO,Colorado,CHEYENNE,First View
+Cope,CO,Colorado,WASHINGTON,Cope
+Cripple Creek,CO,Colorado,TELLER,Cripple Creek
+Divide,CO,Colorado,TELLER,Divide
+Flagler,CO,Colorado,KIT CARSON,Flagler
+Florissant,CO,Colorado,TELLER,Florissant
+Florissant,CO,Colorado,TELLER,Florissant Fossil Beds Natio
+Florissant,CO,Colorado,TELLER,Twin Rock
+Fountain,CO,Colorado,EL PASO,Fountain
+Genoa,CO,Colorado,LINCOLN,Bovina
+Genoa,CO,Colorado,LINCOLN,Genoa
+Green Mountain Falls,CO,Colorado,EL PASO,Green Mtn Fls
+Green Mountain Falls,CO,Colorado,EL PASO,Ute Pass
+Green Mountain Falls,CO,Colorado,EL PASO,Green Mountain Falls
+Guffey,CO,Colorado,PARK,Guffey
+Hugo,CO,Colorado,LINCOLN,Boyero
+Hugo,CO,Colorado,LINCOLN,Punkin Center
+Hugo,CO,Colorado,LINCOLN,Hugo
+Joes,CO,Colorado,YUMA,Joes
+Karval,CO,Colorado,LINCOLN,Karval
+Kirk,CO,Colorado,YUMA,Kirk
+Kit Carson,CO,Colorado,CHEYENNE,Kit Carson
+Limon,CO,Colorado,LINCOLN,Limon Correctional Fac
+Limon,CO,Colorado,LINCOLN,Limon Crrctnl
+Limon,CO,Colorado,LINCOLN,Limon
+Limon,CO,Colorado,LINCOLN,Limon Correctional Facility
+Lake George,CO,Colorado,PARK,Tarryall
+Lake George,CO,Colorado,PARK,Lake George
+Manitou Springs,CO,Colorado,EL PASO,Manitou Springs
+Manitou Springs,CO,Colorado,EL PASO,Crystal Hills
+Manitou Springs,CO,Colorado,EL PASO,Manitou Spgs
+Matheson,CO,Colorado,ELBERT,Matheson
+Peyton,CO,Colorado,EL PASO,Peyton
+Peyton,CO,Colorado,EL PASO,Falcon
+Ramah,CO,Colorado,EL PASO,Ramah
+Rush,CO,Colorado,EL PASO,Rush
+Seibert,CO,Colorado,KIT CARSON,Seibert
+Simla,CO,Colorado,ELBERT,Simla
+Stratton,CO,Colorado,KIT CARSON,Stratton
+Usaf Academy,CO,Colorado,EL PASO,Usaf Academy
+Usaf Academy,CO,Colorado,EL PASO,Us Air Force
+Usaf Academy,CO,Colorado,EL PASO,United States Air Force Acad
+Usaf Academy,CO,Colorado,EL PASO,Cadet Sta
+Victor,CO,Colorado,TELLER,Goldfield
+Victor,CO,Colorado,TELLER,Victor
+Victor,CO,Colorado,TELLER,Elkton
+Vona,CO,Colorado,KIT CARSON,Vona
+Wild Horse,CO,Colorado,CHEYENNE,Aroya
+Wild Horse,CO,Colorado,CHEYENNE,Wild Horse
+Woodland Park,CO,Colorado,TELLER,Crystola
+Woodland Park,CO,Colorado,TELLER,Westwood Lake
+Woodland Park,CO,Colorado,TELLER,Woodland Park
+Yoder,CO,Colorado,EL PASO,Yoder
+Yoder,CO,Colorado,EL PASO,Truckton
+Yoder,CO,Colorado,EL PASO,Edison
+Colorado Springs,CO,Colorado,EL PASO,Colo Spgs
+Colorado Springs,CO,Colorado,EL PASO,Co Spgs
+Colorado Springs,CO,Colorado,EL PASO,Colorado Spgs
+Colorado Springs,CO,Colorado,EL PASO,Colorado Springs
+Colorado Springs,CO,Colorado,EL PASO,Fort Carson
+Colorado Springs,CO,Colorado,EL PASO,Ft Carson
+Colorado Springs,CO,Colorado,EL PASO,Stratmoor Hills
+Colorado Springs,CO,Colorado,EL PASO,Black Forest
+Colorado Springs,CO,Colorado,EL PASO,Widefield
+Colorado Springs,CO,Colorado,EL PASO,Security
+Colorado Springs,CO,Colorado,EL PASO,Ent Air Force Base
+Colorado Springs,CO,Colorado,EL PASO,Falcon AFB
+Colorado Springs,CO,Colorado,EL PASO,Consolidated Space Operation
+CSOC,CO,Colorado,EL PASO,Csoc
+Colorado Springs,CO,Colorado,EL PASO,Schriever Air Force Base
+Colorado Springs,CO,Colorado,EL PASO,Schriever AFB
+Colorado Springs,CO,Colorado,EL PASO,Schriever Air Sta
+Colorado Springs,CO,Colorado,EL PASO,Cimarron Hills
+Colorado Springs,CO,Colorado,EL PASO,Peterson A F B
+Colorado Springs,CO,Colorado,EL PASO,Cheyenne Mt Complex
+Colorado Springs,CO,Colorado,EL PASO,Cheyenne Mtn AFB
+CMAFB,CO,Colorado,EL PASO,Cmafb
+Colorado Springs,CO,Colorado,EL PASO,Peterson Air Force Base
+Colorado Springs,CO,Colorado,EL PASO,Cheyenne Mountain AFB
+Colorado Springs,CO,Colorado,EL PASO,Chey Mtn AFB
+Colorado Springs,CO,Colorado,EL PASO,Peterson AFB
+Colorado Springs,CO,Colorado,EL PASO,Rockrimmon
+Colorado Springs,CO,Colorado,EL PASO,Current Inc
+Colorado Springs,CO,Colorado,EL PASO,Affliated National Bank
+Colorado Springs,CO,Colorado,EL PASO,Us Bank Exchange
+Colorado Springs,CO,Colorado,EL PASO,Co Interstate Gas
+Colorado Springs,CO,Colorado,EL PASO,Comcast
+Colorado Springs,CO,Colorado,EL PASO,Colorado College
+Colorado Springs,CO,Colorado,EL PASO,Co Spgs Utilities
+Colorado Springs,CO,Colorado,EL PASO,Us Olympic Committee
+Colorado Springs,CO,Colorado,EL PASO,Us Olympic
+Colorado Springs,CO,Colorado,EL PASO,Focus On The Family
+Colorado Springs,CO,Colorado,EL PASO,Compassion International
+Pueblo,CO,Colorado,PUEBLO,Pueblo Army Depot
+Pueblo,CO,Colorado,PUEBLO,Pueblo Dep Ac
+Pueblo,CO,Colorado,PUEBLO,Belle Plain
+Pueblo,CO,Colorado,PUEBLO,Devine
+Pueblo,CO,Colorado,PUEBLO,Pueblo Depot Activity
+Pueblo,CO,Colorado,PUEBLO,Pueblo
+Pueblo,CO,Colorado,PUEBLO,Bessemer
+Pueblo,CO,Colorado,PUEBLO,Vineland
+Pueblo,CO,Colorado,PUEBLO,Baxter
+Pueblo,CO,Colorado,PUEBLO,Blende
+Pueblo,CO,Colorado,PUEBLO,Pueblo West
+Pueblo,CO,Colorado,PUEBLO,Pinon
+Pueblo,CO,Colorado,PUEBLO,Govt Printg Ofc
+Pueblo,CO,Colorado,PUEBLO,Co Lottery
+Colorado City,CO,Colorado,PUEBLO,Colo City
+Colorado City,CO,Colorado,PUEBLO,Colorado City
+Aguilar,CO,Colorado,LAS ANIMAS,Aguilar
+Arlington,CO,Colorado,KIOWA,Arlington
+Avondale,CO,Colorado,PUEBLO,N Avondale
+Avondale,CO,Colorado,PUEBLO,Broadacre
+Avondale,CO,Colorado,PUEBLO,North Avondale
+Avondale,CO,Colorado,PUEBLO,Avondale
+Beulah,CO,Colorado,PUEBLO,Beulah
+Boncarbo,CO,Colorado,LAS ANIMAS,Boncarbo
+Boone,CO,Colorado,PUEBLO,Boone
+Branson,CO,Colorado,LAS ANIMAS,Branson
+Campo,CO,Colorado,BACA,Campo
+Cheraw,CO,Colorado,OTERO,Cheraw
+Crowley,CO,Colorado,CROWLEY,Crowley
+Ordway,CO,Colorado,CROWLEY,Ark Valley Corr Facl
+Ordway,CO,Colorado,CROWLEY,Ordway
+Eads,CO,Colorado,KIOWA,Eads
+Eads,CO,Colorado,KIOWA,Brandon
+Eads,CO,Colorado,KIOWA,Chivington
+Fort Lyon,CO,Colorado,BENT,Ft Lyon
+Fort Lyon,CO,Colorado,BENT,Fort Lyon
+Fowler,CO,Colorado,OTERO,Fowler
+Gardner,CO,Colorado,HUERFANO,Gardner
+Gardner,CO,Colorado,HUERFANO,Farisita
+Granada,CO,Colorado,PROWERS,Koen
+Granada,CO,Colorado,PROWERS,Granada
+Granada,CO,Colorado,PROWERS,Barton
+Hartman,CO,Colorado,PROWERS,Hartman
+Hasty,CO,Colorado,BENT,Caddoa
+Hasty,CO,Colorado,BENT,Hasty
+Hasty,CO,Colorado,BENT,John Martin Reservoir
+Haswell,CO,Colorado,KIOWA,Haswell
+Hoehne,CO,Colorado,LAS ANIMAS,Hoehne
+Holly,CO,Colorado,PROWERS,Cheney Center
+Holly,CO,Colorado,PROWERS,Bristol
+Holly,CO,Colorado,PROWERS,Holly
+Kim,CO,Colorado,LAS ANIMAS,Villegreen
+Kim,CO,Colorado,LAS ANIMAS,Kim
+La Junta,CO,Colorado,OTERO,North La Junta
+La Junta,CO,Colorado,OTERO,La Junta
+La Junta,CO,Colorado,OTERO,Fairmont
+La Junta,CO,Colorado,OTERO,Timpas
+La Junta,CO,Colorado,OTERO,Bents Fort
+La Junta,CO,Colorado,OTERO,Ft Bent
+La Junta,CO,Colorado,OTERO,Timber Lake
+La Junta,CO,Colorado,OTERO,Fair View
+La Junta,CO,Colorado,OTERO,Bents Old Fort
+La Junta,CO,Colorado,OTERO,Fort Bent
+La Junta,CO,Colorado,OTERO,Roberta
+Lamar,CO,Colorado,PROWERS,Kornman
+Lamar,CO,Colorado,PROWERS,Prowers
+Lamar,CO,Colorado,PROWERS,May Valley
+Lamar,CO,Colorado,PROWERS,Carlton
+Lamar,CO,Colorado,PROWERS,Shady Camp
+Lamar,CO,Colorado,PROWERS,West Farm
+Lamar,CO,Colorado,PROWERS,Lamar
+Las Animas,CO,Colorado,BENT,Deora
+Las Animas,CO,Colorado,BENT,Las Animas
+Las Animas,CO,Colorado,BENT,Fort Lyon
+Las Animas,CO,Colorado,BENT,Ft Lyon
+Las Animas,CO,Colorado,BENT,Ninaview
+Las Animas,CO,Colorado,BENT,Toonerville
+La Veta,CO,Colorado,HUERFANO,Ojo
+La Veta,CO,Colorado,HUERFANO,La Veta
+La Veta,CO,Colorado,HUERFANO,Indian Creek
+La Veta,CO,Colorado,HUERFANO,Wahatoya
+Mc Clave,CO,Colorado,BENT,Mc Clave
+Mc Clave,CO,Colorado,BENT,Lubers
+Manzanola,CO,Colorado,OTERO,Manzanola
+Model,CO,Colorado,LAS ANIMAS,Tyrone
+Model,CO,Colorado,LAS ANIMAS,Delhi
+Model,CO,Colorado,LAS ANIMAS,Model
+Model,CO,Colorado,LAS ANIMAS,Thatcher
+Olney Springs,CO,Colorado,CROWLEY,Olney Springs
+Ordway,CO,Colorado,CROWLEY,Numa
+Ordway,CO,Colorado,CROWLEY,Punkin Center
+Pritchett,CO,Colorado,BACA,Utleyville
+Pritchett,CO,Colorado,BACA,Pritchett
+Rocky Ford,CO,Colorado,OTERO,Rocky Ford
+Rocky Ford,CO,Colorado,OTERO,Hawley
+Rocky Ford,CO,Colorado,OTERO,Vroman
+Rye,CO,Colorado,PUEBLO,Rye
+Rye,CO,Colorado,PUEBLO,Cedarwood
+Rye,CO,Colorado,PUEBLO,Lascar
+Rye,CO,Colorado,PUEBLO,San Isabel
+Rye,CO,Colorado,PUEBLO,Greenwood
+Sheridan Lake,CO,Colorado,KIOWA,Brandon
+Sheridan Lake,CO,Colorado,KIOWA,Sheridan Lake
+Sheridan Lake,CO,Colorado,KIOWA,Towner
+Springfield,CO,Colorado,BACA,Springfield
+Springfield,CO,Colorado,BACA,Edler
+Springfield,CO,Colorado,BACA,Maxey
+Sugar City,CO,Colorado,CROWLEY,Sugar City
+Swink,CO,Colorado,OTERO,Swink
+Trinchera,CO,Colorado,LAS ANIMAS,Trinchera
+Trinidad,CO,Colorado,LAS ANIMAS,Pinon Canyon
+Trinidad,CO,Colorado,LAS ANIMAS,Sopris
+Trinidad,CO,Colorado,LAS ANIMAS,El Moro
+Trinidad,CO,Colorado,LAS ANIMAS,Starkville
+Trinidad,CO,Colorado,LAS ANIMAS,Cokedale
+Trinidad,CO,Colorado,LAS ANIMAS,Trinidad
+Trinidad,CO,Colorado,LAS ANIMAS,Beshoar Jct
+Trinidad,CO,Colorado,LAS ANIMAS,Jansen
+Trinidad,CO,Colorado,LAS ANIMAS,Ludlow
+Two Buttes,CO,Colorado,BACA,Two Buttes
+Two Buttes,CO,Colorado,BACA,Lycan
+Vilas,CO,Colorado,BACA,Vilas
+Walsenburg,CO,Colorado,HUERFANO,Toltec
+Walsenburg,CO,Colorado,HUERFANO,Mutual
+Walsenburg,CO,Colorado,HUERFANO,Farisita
+Walsenburg,CO,Colorado,HUERFANO,Pryor
+Walsenburg,CO,Colorado,HUERFANO,Walsenburg
+Walsenburg,CO,Colorado,HUERFANO,Farista
+Walsh,CO,Colorado,BACA,Stonington
+Walsh,CO,Colorado,BACA,Walsh
+Weston,CO,Colorado,LAS ANIMAS,East Weston
+Weston,CO,Colorado,LAS ANIMAS,Monument Lake Park
+Weston,CO,Colorado,LAS ANIMAS,Tercio
+Weston,CO,Colorado,LAS ANIMAS,Monument Park
+Weston,CO,Colorado,LAS ANIMAS,Torres Canon
+Weston,CO,Colorado,LAS ANIMAS,Vigil
+Weston,CO,Colorado,LAS ANIMAS,Weston
+Weston,CO,Colorado,LAS ANIMAS,Stonewall
+Wiley,CO,Colorado,PROWERS,Big Bend
+Wiley,CO,Colorado,PROWERS,Wiley
+Alamosa,CO,Colorado,ALAMOSA,Estrella
+Alamosa,CO,Colorado,ALAMOSA,East Alamosa
+Alamosa,CO,Colorado,ALAMOSA,Henry
+Alamosa,CO,Colorado,ALAMOSA,Washington
+Alamosa,CO,Colorado,ALAMOSA,Stanley
+Alamosa,CO,Colorado,ALAMOSA,Carmel
+Alamosa,CO,Colorado,ALAMOSA,Great Sand Dunes National Mo
+Alamosa,CO,Colorado,ALAMOSA,Alamosa
+Alamosa,CO,Colorado,ALAMOSA,Waverly
+Alamosa,CO,Colorado,ALAMOSA,Sand Dunes Mo
+Alamosa,CO,Colorado,ALAMOSA,Adams State College
+Antonito,CO,Colorado,CONEJOS,Espinoza
+Antonito,CO,Colorado,CONEJOS,La Isla
+Antonito,CO,Colorado,CONEJOS,Track City
+Antonito,CO,Colorado,CONEJOS,Ortiz
+Antonito,CO,Colorado,CONEJOS,San Rafeal
+Antonito,CO,Colorado,CONEJOS,San Miguel
+Antonito,CO,Colorado,CONEJOS,Florida
+Antonito,CO,Colorado,CONEJOS,Fox Creek
+Antonito,CO,Colorado,CONEJOS,San Antonio
+Antonito,CO,Colorado,CONEJOS,Antonito
+Antonito,CO,Colorado,CONEJOS,Las Mesitas
+Antonito,CO,Colorado,CONEJOS,Lobatos
+Antonito,CO,Colorado,CONEJOS,Mogote
+Antonito,CO,Colorado,CONEJOS,Paisaje
+Antonito,CO,Colorado,CONEJOS,Los Pinas
+Arboles,CO,Colorado,ARCHULETA,Piedre Park
+Arboles,CO,Colorado,ARCHULETA,Navajo State Park
+Arboles,CO,Colorado,ARCHULETA,Arboles
+Bayfield,CO,Colorado,LA PLATA,Vallecito
+Bayfield,CO,Colorado,LA PLATA,Bayfield
+Bayfield,CO,Colorado,LA PLATA,Chimney Rock
+Bayfield,CO,Colorado,LA PLATA,Gem Village
+Blanca,CO,Colorado,COSTILLA,Blanca
+Capulin,CO,Colorado,CONEJOS,Capulin
+Center,CO,Colorado,RIO GRANDE,Center
+Chama,CO,Colorado,COSTILLA,Chama
+Chromo,CO,Colorado,ARCHULETA,Chromo
+Conejos,CO,Colorado,CONEJOS,Conejos
+Creede,CO,Colorado,MINERAL,Spar City
+Creede,CO,Colorado,MINERAL,Creede
+Crestone,CO,Colorado,SAGUACHE,Crestone
+Del Norte,CO,Colorado,RIO GRANDE,Aqua Ramon
+Del Norte,CO,Colorado,RIO GRANDE,Freeman
+Del Norte,CO,Colorado,RIO GRANDE,Summitville
+Del Norte,CO,Colorado,RIO GRANDE,Plaza
+Del Norte,CO,Colorado,RIO GRANDE,Del Norte
+Del Norte,CO,Colorado,RIO GRANDE,Baxterville
+Fort Garland,CO,Colorado,COSTILLA,Forbes Park
+Fort Garland,CO,Colorado,COSTILLA,Fort Garland
+Fort Garland,CO,Colorado,COSTILLA,Sangre De Cristo Ranches
+Fort Garland,CO,Colorado,COSTILLA,Ft Garland
+Fort Garland,CO,Colorado,COSTILLA,Sangre De Cri
+Homelake,CO,Colorado,RIO GRANDE,Monte Vista
+Homelake,CO,Colorado,RIO GRANDE,Homelake
+Hooper,CO,Colorado,ALAMOSA,Hooper
+Ignacio,CO,Colorado,LA PLATA,Ignacio
+Ignacio,CO,Colorado,LA PLATA,So Ute Indian Res
+Ignacio,CO,Colorado,LA PLATA,Southern Ute Indian Reservat
+Ignacio,CO,Colorado,LA PLATA,Allison
+Ignacio,CO,Colorado,LA PLATA,Oxford
+Ignacio,CO,Colorado,LA PLATA,Tiffany
+Ignacio,CO,Colorado,LA PLATA,S Ute Indian
+Ignacio,CO,Colorado,LA PLATA,Indian Agency
+Jaroso,CO,Colorado,COSTILLA,Jaroso
+La Jara,CO,Colorado,CONEJOS,Morgan
+La Jara,CO,Colorado,CONEJOS,Bountiful
+La Jara,CO,Colorado,CONEJOS,Richfield
+La Jara,CO,Colorado,CONEJOS,La Jara
+Manassa,CO,Colorado,CONEJOS,Manassa
+Moffat,CO,Colorado,SAGUACHE,Moffat
+Moffat,CO,Colorado,SAGUACHE,Mirage
+Monte Vista,CO,Colorado,RIO GRANDE,Monte Vista
+Monte Vista,CO,Colorado,RIO GRANDE,Maxeyville
+Monte Vista,CO,Colorado,RIO GRANDE,Lariat
+Monte Vista,CO,Colorado,RIO GRANDE,Sargents School
+Mosca,CO,Colorado,ALAMOSA,Mosca
+Pagosa Springs,CO,Colorado,ARCHULETA,Pagosa Spgs
+Pagosa Springs,CO,Colorado,ARCHULETA,Chimney Rock
+Pagosa Springs,CO,Colorado,ARCHULETA,Pagosa Lakes
+Pagosa Springs,CO,Colorado,ARCHULETA,Pagosa Springs
+Romeo,CO,Colorado,CONEJOS,Romeo
+Saguache,CO,Colorado,SAGUACHE,Saguache
+Sanford,CO,Colorado,CONEJOS,San Acacio
+Sanford,CO,Colorado,CONEJOS,Lasauses
+Sanford,CO,Colorado,CONEJOS,Sanford
+San Luis,CO,Colorado,COSTILLA,Wildhorse Mesa
+San Luis,CO,Colorado,COSTILLA,Garcia
+San Luis,CO,Colorado,COSTILLA,Los Fuertes
+San Luis,CO,Colorado,COSTILLA,San Luis
+San Luis,CO,Colorado,COSTILLA,San Pablo
+San Luis,CO,Colorado,COSTILLA,San Pedro
+San Luis,CO,Colorado,COSTILLA,El Rito
+San Luis,CO,Colorado,COSTILLA,Mesita
+San Luis,CO,Colorado,COSTILLA,San Francisco
+South Fork,CO,Colorado,RIO GRANDE,Alpine
+South Fork,CO,Colorado,RIO GRANDE,Masonic Park
+South Fork,CO,Colorado,RIO GRANDE,South Fork
+South Fork,CO,Colorado,RIO GRANDE,Wagon Wheel Gap
+Villa Grove,CO,Colorado,SAGUACHE,Villa Grove
+Villa Grove,CO,Colorado,SAGUACHE,Bonanza City
+Salida,CO,Colorado,CHAFFEE,Cleora
+Salida,CO,Colorado,CHAFFEE,Maysville
+Salida,CO,Colorado,CHAFFEE,Turret
+Salida,CO,Colorado,CHAFFEE,Smeltertown
+Salida,CO,Colorado,CHAFFEE,Wellsville
+Salida,CO,Colorado,CHAFFEE,Swissvale
+Salida,CO,Colorado,CHAFFEE,Salida
+Almont,CO,Colorado,GUNNISON,Spring Creek
+Almont,CO,Colorado,GUNNISON,Rainbow
+Almont,CO,Colorado,GUNNISON,Jacks Cabin
+Almont,CO,Colorado,GUNNISON,Almont
+Almont,CO,Colorado,GUNNISON,Taylor Park
+Almont,CO,Colorado,GUNNISON,Tincup
+Buena Vista,CO,Colorado,CHAFFEE,Buena Vista
+Buena Vista,CO,Colorado,CHAFFEE,Johnson Village
+Canon City,CO,Colorado,FREMONT,Penitentiary
+Canon City,CO,Colorado,FREMONT,Prospect Heights
+Canon City,CO,Colorado,FREMONT,Buckskin Joe
+Canon City,CO,Colorado,FREMONT,Canon City
+Canon City,CO,Colorado,FREMONT,Parkdale
+Canon City,CO,Colorado,FREMONT,Ilse
+Canon City,CO,Colorado,FREMONT,Brookside
+Cimarron,CO,Colorado,MONTROSE,Cimarron
+Coal Creek,CO,Colorado,FREMONT,Coal Creek
+Coaldale,CO,Colorado,FREMONT,Coaldale
+Cotopaxi,CO,Colorado,FREMONT,Texas Creek
+Cotopaxi,CO,Colorado,FREMONT,Cotopaxi
+Crested Butte,CO,Colorado,GUNNISON,Cement Creek
+Crested Butte,CO,Colorado,GUNNISON,Crested Butte
+Crested Butte,CO,Colorado,GUNNISON,Riverbend
+Crested Butte,CO,Colorado,GUNNISON,Skyland
+Crested Butte,CO,Colorado,GUNNISON,Crested Butte So
+Crested Butte,CO,Colorado,GUNNISON,Meridian Lake
+Crested Butte,CO,Colorado,GUNNISON,Mt Crested Butte
+Crested Butte,CO,Colorado,GUNNISON,Mount Crested Butte
+Florence,CO,Colorado,FREMONT,Portland
+Florence,CO,Colorado,FREMONT,Williamsburg
+Florence,CO,Colorado,FREMONT,Florence
+Florence,CO,Colorado,FREMONT,Brewster
+Monarch,CO,Colorado,CHAFFEE,Monarch
+Monarch,CO,Colorado,CHAFFEE,Salida
+Granite,CO,Colorado,CHAFFEE,Granite
+Granite,CO,Colorado,CHAFFEE,Twin Lakes
+Gunnison,CO,Colorado,GUNNISON,Baldwin
+Gunnison,CO,Colorado,GUNNISON,Doyleville
+Gunnison,CO,Colorado,GUNNISON,Iola
+Gunnison,CO,Colorado,GUNNISON,Taylor Park
+Gunnison,CO,Colorado,GUNNISON,Gunnison
+Gunnison,CO,Colorado,GUNNISON,Western State College
+Hillside,CO,Colorado,FREMONT,Hillside
+Howard,CO,Colorado,FREMONT,Howard
+Lake City,CO,Colorado,HINSDALE,Lake City
+Nathrop,CO,Colorado,CHAFFEE,Alpine Village
+Nathrop,CO,Colorado,CHAFFEE,Saint Elmo
+Nathrop,CO,Colorado,CHAFFEE,Iron City
+Nathrop,CO,Colorado,CHAFFEE,Mount Princeton
+Nathrop,CO,Colorado,CHAFFEE,Nathrop
+Ohio City,CO,Colorado,GUNNISON,Ohio City
+Parlin,CO,Colorado,GUNNISON,Parlin
+Penrose,CO,Colorado,FREMONT,Penrose
+Pitkin,CO,Colorado,GUNNISON,Pitkin
+Poncha Springs,CO,Colorado,CHAFFEE,Poncha Springs
+Poncha Springs,CO,Colorado,CHAFFEE,Poncha Spgs
+Powderhorn,CO,Colorado,GUNNISON,Powderhorn
+Rockvale,CO,Colorado,FREMONT,Rockvale
+Gunnison,CO,Colorado,GUNNISON,Sapinero
+Gunnison,CO,Colorado,GUNNISON,Windy Point
+Sargents,CO,Colorado,SAGUACHE,White Pine
+Sargents,CO,Colorado,SAGUACHE,Sargents
+Twin Lakes,CO,Colorado,LAKE,Twin Lakes
+Westcliffe,CO,Colorado,CUSTER,Westcliffe
+Westcliffe,CO,Colorado,CUSTER,Horn Creek
+Westcliffe,CO,Colorado,CUSTER,Silver Cliff
+Westcliffe,CO,Colorado,CUSTER,Tanglewood Acres
+Westcliffe,CO,Colorado,CUSTER,Rosita
+Wetmore,CO,Colorado,CUSTER,Wetmore
+Wetmore,CO,Colorado,CUSTER,Greenwood
+Florence,CO,Colorado,FREMONT,Federal Correctional Complex
+Durango,CO,Colorado,LA PLATA,College Heights Durango
+Durango,CO,Colorado,LA PLATA,Durango
+Durango,CO,Colorado,LA PLATA,Tamarron
+Durango,CO,Colorado,LA PLATA,Purgatory
+Durango,CO,Colorado,LA PLATA,Hermosa
+Cahone,CO,Colorado,DOLORES,Cahone
+Cortez,CO,Colorado,MONTEZUMA,Arriola
+Cortez,CO,Colorado,MONTEZUMA,Cortez
+Cortez,CO,Colorado,MONTEZUMA,Hovenweep National Monument
+Dolores,CO,Colorado,MONTEZUMA,Dolores
+Dolores,CO,Colorado,MONTEZUMA,Dunton
+Dolores,CO,Colorado,MONTEZUMA,Stoner
+Dove Creek,CO,Colorado,DOLORES,Dove Creek
+Dove Creek,CO,Colorado,DOLORES,Squaw Point
+Egnar,CO,Colorado,SAN MIGUEL,Slick Rock
+Egnar,CO,Colorado,SAN MIGUEL,Egnar
+Hesperus,CO,Colorado,LA PLATA,Kline
+Hesperus,CO,Colorado,LA PLATA,Hesperus
+Hesperus,CO,Colorado,LA PLATA,Breen
+Hesperus,CO,Colorado,LA PLATA,Redmesa
+Lewis,CO,Colorado,MONTEZUMA,Lewis
+Mancos,CO,Colorado,MONTEZUMA,Mancos
+Marvel,CO,Colorado,LA PLATA,Marvel
+Mesa Verde National Park,CO,Colorado,MONTEZUMA,Mesa Verde
+Mesa Verde National Park,CO,Colorado,MONTEZUMA,Mesa Verde National Park
+Pleasant View,CO,Colorado,MONTEZUMA,Pleasant View
+Rico,CO,Colorado,DOLORES,Rico
+Towaoc,CO,Colorado,MONTEZUMA,Ute Mountain Indian Reservat
+Towaoc,CO,Colorado,MONTEZUMA,Towaoc
+Yellow Jacket,CO,Colorado,MONTEZUMA,Yellow Jacket
+Montrose,CO,Colorado,MONTROSE,Montrose
+Montrose,CO,Colorado,MONTROSE,Colona
+Austin,CO,Colorado,DELTA,Austin
+Austin,CO,Colorado,DELTA,Orchard City
+Bedrock,CO,Colorado,MONTROSE,Bedrock
+Cedaredge,CO,Colorado,DELTA,Grand Mesa
+Cedaredge,CO,Colorado,DELTA,Coalby
+Cedaredge,CO,Colorado,DELTA,Cedaredge
+Cory,CO,Colorado,DELTA,Cory
+Cory,CO,Colorado,DELTA,Orchard City
+Crawford,CO,Colorado,DELTA,Maher
+Crawford,CO,Colorado,DELTA,Crawford
+Delta,CO,Colorado,DELTA,Delta
+Eckert,CO,Colorado,DELTA,Orchard City
+Eckert,CO,Colorado,DELTA,Eckert
+Hotchkiss,CO,Colorado,DELTA,Rogers Mesa
+Hotchkiss,CO,Colorado,DELTA,Hotchkiss
+Lazear,CO,Colorado,DELTA,Lazear
+Naturita,CO,Colorado,MONTROSE,Naturita
+Norwood,CO,Colorado,SAN MIGUEL,Norwood
+Nucla,CO,Colorado,MONTROSE,Nucla
+Olathe,CO,Colorado,MONTROSE,Olathe
+Ophir,CO,Colorado,SAN MIGUEL,Ophir
+Ouray,CO,Colorado,OURAY,Red Mountain
+Ouray,CO,Colorado,OURAY,Ouray
+Paonia,CO,Colorado,DELTA,Bowie
+Paonia,CO,Colorado,DELTA,Paonia
+Paradox,CO,Colorado,MONTROSE,Paradox
+Placerville,CO,Colorado,SAN MIGUEL,Sawpit
+Placerville,CO,Colorado,SAN MIGUEL,Placerville
+Redvale,CO,Colorado,MONTROSE,Redvale
+Ridgway,CO,Colorado,OURAY,Ridgway
+Silverton,CO,Colorado,SAN JUAN,Silverton
+Somerset,CO,Colorado,GUNNISON,Somerset
+Somerset,CO,Colorado,GUNNISON,Bear Mine
+Telluride,CO,Colorado,SAN MIGUEL,Sawpit
+Telluride,CO,Colorado,SAN MIGUEL,Mountain Village
+Telluride,CO,Colorado,SAN MIGUEL,Mountain Vlg
+Telluride,CO,Colorado,SAN MIGUEL,Pandora
+Telluride,CO,Colorado,SAN MIGUEL,Telluride
+Grand Junction,CO,Colorado,MESA,Grand Jct
+Grand Junction,CO,Colorado,MESA,Grand Junction
+Grand Junction,CO,Colorado,MESA,Fruitvale
+Grand Junction,CO,Colorado,MESA,Appleton
+Clifton,CO,Colorado,MESA,Clifton
+Fruita,CO,Colorado,MESA,Colorado National Monument
+Fruita,CO,Colorado,MESA,Fruita
+Gateway,CO,Colorado,MESA,Gateway
+Glade Park,CO,Colorado,MESA,Glade Park
+Loma,CO,Colorado,MESA,Loma
+Mack,CO,Colorado,MESA,New Liberty
+Mack,CO,Colorado,MESA,Mack
+Palisade,CO,Colorado,MESA,Palisade
+Palisade,CO,Colorado,MESA,East Orchard Mesa
+Whitewater,CO,Colorado,MESA,Whitewater
+Glenwood Springs,CO,Colorado,GARFIELD,Cardiff
+Glenwood Springs,CO,Colorado,GARFIELD,West Glenwood
+Glenwood Springs,CO,Colorado,GARFIELD,Glenwood Springs
+Glenwood Springs,CO,Colorado,GARFIELD,Glenwood Spgs
+Glenwood Springs,CO,Colorado,GARFIELD,Glenwood
+Dinosaur,CO,Colorado,MOFFAT,Massadona
+Dinosaur,CO,Colorado,MOFFAT,Blue Mountain
+Dinosaur,CO,Colorado,MOFFAT,Dinosaur
+Aspen,CO,Colorado,PITKIN,Aspen
+Aspen,CO,Colorado,PITKIN,Aspen Gerbaz
+Snowmass Village,CO,Colorado,PITKIN,Snowmass Vlg
+Snowmass Village,CO,Colorado,PITKIN,Snowmass Village
+Snowmass Village,CO,Colorado,PITKIN,West Village
+Avon,CO,Colorado,EAGLE,Avon
+Avon,CO,Colorado,EAGLE,Beaver Creek
+Basalt,CO,Colorado,EAGLE,Basalt
+Basalt,CO,Colorado,EAGLE,Ruedi
+Carbondale,CO,Colorado,GARFIELD,Marble
+Carbondale,CO,Colorado,GARFIELD,Carbondale
+Carbondale,CO,Colorado,GARFIELD,Crystal
+Carbondale,CO,Colorado,GARFIELD,Redstone
+Carbondale,CO,Colorado,GARFIELD,El Jebel
+Collbran,CO,Colorado,MESA,Collbran
+Collbran,CO,Colorado,MESA,Plateau City
+Craig,CO,Colorado,MOFFAT,Lay
+Craig,CO,Colorado,MOFFAT,Craig
+De Beque,CO,Colorado,MESA,De Beque
+Eagle,CO,Colorado,EAGLE,Eagle
+Edwards,CO,Colorado,EAGLE,Edwards
+Edwards,CO,Colorado,EAGLE,Cordillera
+Dinosaur,CO,Colorado,MOFFAT,Elk Springs
+Parachute,CO,Colorado,GARFIELD,Rulison
+Parachute,CO,Colorado,GARFIELD,Btlmt Mesa
+Parachute,CO,Colorado,GARFIELD,Parachute
+Parachute,CO,Colorado,GARFIELD,Battlement Mesa
+Parachute,CO,Colorado,GARFIELD,Grand Valley
+Battlement Mesa,CO,Colorado,GARFIELD,Parachute
+Battlement Mesa,CO,Colorado,GARFIELD,Btlmt Mesa
+Battlement Mesa,CO,Colorado,GARFIELD,Battlement Mesa
+Gypsum,CO,Colorado,EAGLE,Dotsero
+Gypsum,CO,Colorado,EAGLE,Sweetwater
+Gypsum,CO,Colorado,EAGLE,Gypsum
+Hamilton,CO,Colorado,MOFFAT,Hamilton
+Hamilton,CO,Colorado,MOFFAT,Pagoda
+Hayden,CO,Colorado,ROUTT,Hayden
+Maybell,CO,Colorado,MOFFAT,Greystone
+Maybell,CO,Colorado,MOFFAT,Browns Park
+Maybell,CO,Colorado,MOFFAT,Maybell
+Meeker,CO,Colorado,RIO BLANCO,Meeker
+Meeker,CO,Colorado,RIO BLANCO,Axel
+Meeker,CO,Colorado,RIO BLANCO,Buford
+Meredith,CO,Colorado,PITKIN,Meredith
+Meredith,CO,Colorado,PITKIN,Nast
+Meredith,CO,Colorado,PITKIN,Norrie
+Mesa,CO,Colorado,MESA,Mesa
+Minturn,CO,Colorado,EAGLE,Gilman
+Minturn,CO,Colorado,EAGLE,Minturn
+Molina,CO,Colorado,MESA,Molina
+New Castle,CO,Colorado,GARFIELD,New Castle
+Rangely,CO,Colorado,RIO BLANCO,Rangely
+Red Cliff,CO,Colorado,EAGLE,Red Cliff
+Rifle,CO,Colorado,GARFIELD,Antlers
+Rifle,CO,Colorado,GARFIELD,Rulison
+Rifle,CO,Colorado,GARFIELD,Rifle
+Rifle,CO,Colorado,GARFIELD,Rio Blanco
+Silt,CO,Colorado,GARFIELD,Silt
+Slater,CO,Colorado,MOFFAT,Slater
+Snowmass,CO,Colorado,PITKIN,Snowmass
+Snowmass,CO,Colorado,PITKIN,Old Snowmass
+Wolcott,CO,Colorado,EAGLE,Wolcott
+Woody Creek,CO,Colorado,PITKIN,Woody Creek
+Vail,CO,Colorado,EAGLE,Vail
+Vail,CO,Colorado,EAGLE,East Vail
+Vail,CO,Colorado,EAGLE,West Vail

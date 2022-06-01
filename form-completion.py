@@ -121,4 +121,4 @@ def complete_form(num_times):
     driver.quit()
 
 
-# complete_form(3)
+complete_form(10)
